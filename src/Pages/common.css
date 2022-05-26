@@ -1,0 +1,16 @@
+.nav-bg{
+    background-image: linear-gradient(#6EBF8B, #39AEA9);
+}
+.common-btn{
+    background-image: linear-gradient(#6EBF8B, #39AEA9);
+    color: white;
+    font-weight: 600;
+}
+.hover2:hover{
+    transform: scale(1.2);
+    transition: 0.2s;
+}
+.hover1:hover{
+    transform: scale(1.05);
+    transition: 0.2s;
+}
