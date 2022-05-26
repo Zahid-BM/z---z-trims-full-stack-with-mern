@@ -1,11 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ToastContainer } from 'react-toastify';
+import Header from './Pages/Header/Header';
 
 function App() {
   return (
     <div>
       <ToastContainer></ToastContainer>
-      <h1 className='text-center'>This is testing</h1>
+      <Header></Header>
 
     </div>
   );
