@@ -1,11 +1,13 @@
 import React from 'react';
-import CommonButton from '../Shared/CommonButton';
+import PageTitle from '../Shared/PageTitle/PageTitle';
+import Banner from './Banner/Banner';
 
 const Home = () => {
     return (
         <div>
-            <h1 className='text-center text-success'>This is Home</h1>
-            <CommonButton>Testing Now</CommonButton>
+            <PageTitle title={'Home'} pageColor='home-bg'></PageTitle>
+            <Banner></Banner>
+
         </div>
     );
 };
