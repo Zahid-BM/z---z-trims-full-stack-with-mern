@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 const CommonButton = ({ children }) => {
     return (
         <div>
-            <Button className='common-btn border-0 rounded-pill px-5 hover1'>{children}</Button>
+            <Button className='common-btn border-0 rounded-pill px-5 hover1 w-100'>{children}</Button>
         </div>
     );
 };
