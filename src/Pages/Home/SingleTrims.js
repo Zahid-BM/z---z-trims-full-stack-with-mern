@@ -14,7 +14,7 @@ const SingleTrims = ({ singleTRims }) => {
     return (
         <>
             <Col className='g-4 ' lg={4} >
-                <Card className='h-100 shadow'>
+                <Card className='h-100 shadow bg-light'>
                     <Card.Img className='w-100 h-100' variant="top" src={img} />
                     <Card.Body className='p-4 d-flex flex-column'>
                         <Card.Title className='mt-3 text-success'>{name}</Card.Title>
