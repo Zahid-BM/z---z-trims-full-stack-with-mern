@@ -21,7 +21,7 @@ const Header = () => {
 
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" variant='dark' className='nav-bg' sticky='top'>
+            <Navbar collapseOnSelect expand="lg" variant='dark' className='base-bg' sticky='top'>
                 <Container fluid>
                     <Navbar.Brand className='fw-bold fs-3 fst-italic mb-0' style={{ fontFamily: 'Lobstar' }} as={Link} to="/">
                         <div className='h-50'>
