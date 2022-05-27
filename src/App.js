@@ -5,6 +5,7 @@ import Home from './Pages/Home/Home';
 import '../src/Pages/common.css';
 import { Route, Routes } from 'react-router-dom';
 import Purchase from './Pages/Purchase/Purchase';
+import Blogs from './Pages/Blogs/Blogs';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/home' element={<Home />}></Route>
+        <Route path='/blogs' element={<Blogs />}></Route>
         <Route path='/purchase/:id' element={<Purchase />}></Route>
       </Routes>
     </div>

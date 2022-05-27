@@ -6,10 +6,7 @@
     color: white;
     font-weight: 600;
 }
-.hover2:hover{
-    transform: scale(1.05);
-    transition: 0.2s;
-}
+
 .hover1:hover{
     transform: scale(1.05);
     transition: 0.2s;
