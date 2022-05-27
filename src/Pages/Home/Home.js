@@ -1,7 +1,7 @@
 import React from 'react';
-import BusinessSummery from '../BusinessSummery/BusinessSummery';
 import PageTitle from '../Shared/PageTitle/PageTitle';
 import Banner from './Banner/Banner';
+import BusinessSummery from './BusinessSummery/BusinessSummery';
 import Trims from './Trims';
 
 const Home = () => {

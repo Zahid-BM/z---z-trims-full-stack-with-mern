@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import productPhoto from '../../images/business(1).png';
-import customers from '../../images/target-users.png';
-import business from '../../images/business.png';
-import trophy from '../../images/trophy.png';
-import nomination from '../../images/nomination.png';
+import productPhoto from '../../../images/business(1).png';
+import customers from '../../../images/target-users.png';
+import business from '../../../images/business.png';
+import trophy from '../../../images/trophy.png';
+import nomination from '../../../images/nomination.png';
 
 const BusinessSummery = () => {
     return (
