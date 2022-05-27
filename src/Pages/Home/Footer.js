@@ -5,8 +5,14 @@ import appImage3 from '../../images/facebook(1).png';
 import appImage4 from '../../images/linkedin(1).png';
 import appImage5 from '../../images/twitter(1).png';
 import appImage6 from '../../images/logo.png';
+import bangladesh from '../../images/bangladesh.png';
+import united from '../../images/united.png';
+import japan from '../../images/japan.png';
+import levis from '../../images/levis.png';
+import puma from '../../images/puma.png';
+import nike from '../../images/nike.png';
 import { Button, Col, Container, Row } from 'react-bootstrap';
-    
+
 
 const Footer = () => {
     const today = new Date();
@@ -17,6 +23,37 @@ const Footer = () => {
 
 
             <footer className='base-bg mt-5 '>
+                <div className='d-md-flex justify-content-around'>
+                    <div className='d-flex flex-column align-items-center my-5'>
+                        <Button className='text-decoration-none text-dark' variant="link">Site Builders</Button>
+                        <Button className='text-decoration-none text-dark' variant="link">Programmers</Button>
+                        <Button className='text-decoration-none text-dark' variant="link">Licenses</Button>
+                        <Button className='text-decoration-none text-dark' variant="link">map</Button>
+                    </div>
+                    <div className='d-flex flex-column align-items-center my-5'>
+                        <Button className='text-decoration-none text-dark' variant="link">Suppliers</Button>
+                        <Button className='text-decoration-none text-dark' variant="link">Shipping</Button>
+                        <Button className='text-decoration-none text-dark' variant="link">Delivery</Button>
+                        <Button className='text-decoration-none text-dark' variant="link">Security</Button>
+                    </div>
+                    <div className='d-flex flex-column align-items-center my-auto'>
+                        <h4><img src={appImage6} alt="" /><span style={{ fontFamily: 'Lobstar' }} className='text-warning fw-bold fst-italic fs-2'>Z&Z</span></h4>  <span className='fs-6'><span className='text-warning fw-bold'>Trims</span> <span className='text-success fw-bold'>Manufacturer</span></span> <br />
+                        <p className='fw-bold'>The Pioneer of Trims Suppliers</p>
+                        All right reserved &copy;{year}
+                    </div>
+                    <div className='d-flex flex-column align-items-center my-5'>
+                        <Button className='text-decoration-none text-dark' variant="link">Port Facilities</Button>
+                        <Button className='text-decoration-none text-dark' variant="link">Lead time</Button>
+                        <Button className='text-decoration-none text-dark' variant="link">Delivery Policy</Button>
+                        <Button className='text-decoration-none text-dark' variant="link">Wastage Report</Button>
+                    </div>
+                    <div className='d-flex flex-column align-items-center my-5'>
+                        <Button className='text-decoration-none text-dark' variant="link">Career</Button>
+                        <Button className='text-decoration-none text-dark' variant="link">Newsletter</Button>
+                        <Button className='text-decoration-none text-dark' variant="link">Employees</Button>
+                        <Button className='text-decoration-none text-dark' variant="link">Social Contribution</Button>
+                    </div>
+                </div>
                 <Container fluid>
                     <Row>
                         <Col className='my-auto' lg={3}>
@@ -37,52 +74,22 @@ const Footer = () => {
                         </Col>
                         <Col className='my-auto' lg={3}>
                             <div className='text-center py-5'>
-                                <h5 className='text-black'>Find us on</h5>
-                                <img className='m-2 hover2' src={appImage3} alt="" />
-                                <img className='m-2 hover2' src={appImage4} alt="" />
-                                <img className='m-2 hover2' src={appImage5} alt="" />
+                                <h5 className='text-black'>Global Branches</h5>
+                                <img className='m-2 hover2' src={bangladesh} alt="" />
+                                <img className='m-2 hover2' src={united} alt="" />
+                                <img className='m-2 hover2' src={japan} alt="" />
                             </div>
                         </Col>
                         <Col className='my-auto' lg={3}>
                             <div className='text-center py-5'>
-                                <h5 className='text-black'>Find us on</h5>
-                                <img className='m-2 hover2' src={appImage3} alt="" />
-                                <img className='m-2 hover2' src={appImage4} alt="" />
-                                <img className='m-2 hover2' src={appImage5} alt="" />
+                                <h5 className='text-black'>Official Partner</h5>
+                                <img className='m-2 hover2' src={nike} alt="" />
+                                <img className='m-2 hover2' src={levis} alt="" />
+                                <img className='m-2 hover2' src={puma} alt="" />
                             </div>
                         </Col>
                     </Row>
                 </Container>
-                <div className='d-md-flex justify-content-around'>
-                    <div className='d-flex flex-column align-items-center my-5'>
-                        <Button className='text-decoration-none text-dark' variant="link">Our Global Office</Button>
-                        <Button className='text-decoration-none text-dark' variant="link">Our Global Office</Button>
-                        <Button className='text-decoration-none text-dark' variant="link">Our Global Office</Button>
-                        <Button className='text-decoration-none text-dark' variant="link">Our Global Office</Button>
-                    </div>
-                    <div className='d-flex flex-column align-items-center my-5'>
-                        <Button className='text-decoration-none text-dark' variant="link">Our Global Office</Button>
-                        <Button className='text-decoration-none text-dark' variant="link">Our Global Office</Button>
-                        <Button className='text-decoration-none text-dark' variant="link">Our Global Office</Button>
-                        <Button className='text-decoration-none text-dark' variant="link">Our Global Office</Button>
-                    </div>
-                    <div className='d-flex flex-column align-items-center my-5'>
-                        <h4><img src={appImage6} alt="" /><span style={{ fontFamily: 'Lobstar' }} className='text-warning fw-bold fst-italic'>Z&Z</span></h4>  <span className='fs-6'><span className='text-warning fw-bold'>Trims</span> <span className='text-success fw-bold'>Manufacturer</span></span> <br />
-                        All right reserved &copy;{year}
-                    </div>
-                    <div className='d-flex flex-column align-items-center my-5'>
-                        <Button className='text-decoration-none text-dark' variant="link">Our Global Office</Button>
-                        <Button className='text-decoration-none text-dark' variant="link">Our Global Office</Button>
-                        <Button className='text-decoration-none text-dark' variant="link">Our Global Office</Button>
-                        <Button className='text-decoration-none text-dark' variant="link">Our Global Office</Button>
-                    </div>
-                    <div className='d-flex flex-column align-items-center my-5'>
-                        <Button className='text-decoration-none text-dark' variant="link">Our Global Office</Button>
-                        <Button className='text-decoration-none text-dark' variant="link">Our Global Office</Button>
-                        <Button className='text-decoration-none text-dark' variant="link">Our Global Office</Button>
-                        <Button className='text-decoration-none text-dark' variant="link">Our Global Office</Button>
-                    </div>
-                </div>
             </footer>
         </>
     );
