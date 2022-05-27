@@ -8,40 +8,41 @@ const Blogs = () => {
     return (
         <>
             <PageTitle title={'Blogs'} pageColor={'blogs-bg'}></PageTitle>
-            <Container >
+            <Container className='bg-light rounded shadow-lg px-3 py-4 my-3' >
                 <h1 className='text-center fw-bold text-success display-4 mt-5 mb-3'>The questions to be answered <img src={question} alt="" /></h1>
                 <Row>
                     <Col className='my-auto py-5 my-auto ' lg={7}>
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item className='base-bg text-white' eventKey="0">
-                                <Accordion.Header >What are the difference between JavaScrips and Nodejs?</Accordion.Header>
+                                <Accordion.Header >How will you improve the performance of a React Application ??</Accordion.Header>
                                 <Accordion.Body>
-                                    JavaScript basically a scripting language that is used for client side scripting at the primary level and built into java and HTML.On the other hand, Nodejs is a server side scripting programming language based on the google V8 Engine. Beside, javascript runs almost all browsers and nodejs is an environment to run javascript.
+                                    To improve React performance, we need to make sure that components receive only necessary props.It will let us control the CPU consumption and avoid over-rendering unnecessary features. Alongside, splitting data into components, image optimization, avoiding inline functions, calling data from multiple APIs etc.
 
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item className='base-bg text-white' eventKey="1">
-                                <Accordion.Header>When should you use nodejs and when should you use mongodb?</Accordion.Header>
+                                <Accordion.Header>What are the different ways to manage a state in a React application ?</Accordion.Header>
                                 <Accordion.Body>
-                                    To answer this question we should know that, Nodejs is a run time environment/engine to run javascript programming language and mongodb is database engine and used for storing data. Now the answer is when we want to run javascript programming language to work server side or connect to database then we should use nodejs. On the other hand, if we want to handle data like update, delete or crud operation efficiently in the nosql database then we should use Mongodb.
+                                    We know react uses an observable object as the state that observes what changes are made to the state and helps the component behave accordingly. Means if a single change is made then react can easily catch and update that so faster. We can manage states in Global State, Local state, Server state and URL state mainly.
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item className='base-bg text-white' eventKey="2">
-                                <Accordion.Header>What are the difference between SQL and NoSQL database?</Accordion.Header>
+                                <Accordion.Header>How does prototypical inheritance work ?</Accordion.Header>
                                 <Accordion.Body>
-                                    SQL stands for Structured Query Language and NoSQL stands for Not only Structured Query Language. SQL is a rational database and NoSQL is a non-rational language. SQL has static schema and NoSQL has a dynamic schema. SQL database is Vertically Scalable and Nosql  is Horizontally scalable. Most significantly for this Nosql is more lightweight and more famous.
+
+                                    In easy words, prototypical inheritance means to the ability to access object properties from another object. We use a JavaScript prototype to add new properties and methods to an existing object constructor. We can then essentially tell our JS code to inherit properties from a prototype. This basically works one way binding. Now a days in modern JavaScript we use __proto__
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item className='base-bg text-white' eventKey="3">
-                                <Accordion.Header>What are the difference between SQL and NoSQL database?</Accordion.Header>
+                                <Accordion.Header>Why you do not set the state directly in React.For example, if you have const[products, setProducts]= useState([]).Why you do not set products =[...]instead, you use the setProducts?</Accordion.Header>
                                 <Accordion.Body>
-                                    SQL stands for Structured Query Language and NoSQL stands for Not only Structured Query Language. SQL is a rational database and NoSQL is a non-rational language. SQL has static schema and NoSQL has a dynamic schema. SQL database is Vertically Scalable and Nosql  is Horizontally scalable. Most significantly for this Nosql is more lightweight and more famous.
+                                    If we set products =[...] then it does not change this. state immediately. Instead, it creates a pending state transition, and accessing it after calling this method will only return the present value means empty array coz we set a default value as an empty array.
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item className='base-bg text-white' eventKey="4">
-                                <Accordion.Header>What are the difference between SQL and NoSQL database?</Accordion.Header>
+                                <Accordion.Header>What is a unit test? Why should you write unit tests?</Accordion.Header>
                                 <Accordion.Body>
-                                    SQL stands for Structured Query Language and NoSQL stands for Not only Structured Query Language. SQL is a rational database and NoSQL is a non-rational language. SQL has static schema and NoSQL has a dynamic schema. SQL database is Vertically Scalable and Nosql  is Horizontally scalable. Most significantly for this Nosql is more lightweight and more famous.
+                                    In easy words, unit test is a software developing process by which a small part of an application is scrutinized for proper operation. Example: checking a function whether it is working or not. Unit testing is very necessary because that really prevents the complex bugs and error. Before deployment and publication unit testing ells us the bugs and where to improve. All developer should have a practice of unit testing code writing process.
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
