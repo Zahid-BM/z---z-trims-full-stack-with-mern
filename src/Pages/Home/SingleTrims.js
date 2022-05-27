@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Col, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import order1 from '../../images/order(1).png';
+import purchase from '../../images/purchase(2).png';
 
 
 const SingleTrims = ({ singleTRims }) => {
@@ -26,7 +26,7 @@ const SingleTrims = ({ singleTRims }) => {
                         <h6 className='text-secondary mb-4'>Minimum Order Quantity : {moq} pcs</h6>
 
                         {<div className='mt-auto' >
-                            <Button onClick={() => navigateToPurchasePage(_id)} className='common-btn border-0 rounded-pill px-5 hover1 w-100'>Order Now<img className='ms-2' src={order1} alt="" /></Button>
+                            <Button onClick={() => navigateToPurchasePage(_id)} className='common-btn border-0 rounded-pill px-5 hover1 w-100 py-2'>Order Now<img className='ms-2' src={purchase} alt="" /></Button>
                         </div>}
                     </Card.Body>
                 </Card>
