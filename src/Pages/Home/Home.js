@@ -5,6 +5,7 @@ import Promotion from './Promotion';
 import BusinessSummery from './BusinessSummery/BusinessSummery';
 import Footer from './Footer';
 import Reviews from './Reviews/Reviews';
+import Choose from './Choose';
 import Trims from './Trims';
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
             <Promotion></Promotion>
             <BusinessSummery></BusinessSummery>
             <Reviews></Reviews>
+            <Choose></Choose>
             <Footer></Footer>
 
         </div>
