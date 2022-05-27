@@ -1,7 +1,6 @@
 import React from 'react';
-import { Card, Col } from 'react-bootstrap';
+import { Card, Col, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import CommonButton from '../Shared/CommonButton';
 import order1 from '../../images/order(1).png';
 
 
@@ -9,9 +8,9 @@ const SingleTrims = ({ singleTRims }) => {
     const { _id, name, price, description, moq, quantity, img } = singleTRims;
     const navigate = useNavigate();
 
-    const navigateToInventory = id => {
-        navigate(`/trims/${id}`)
-    }
+    const navigateToPurchasePage = id => {
+        navigate(`/purchase/${id}`)
+    };
     return (
         <>
             <Col className='g-4 ' lg={4} >
@@ -27,7 +26,7 @@ const SingleTrims = ({ singleTRims }) => {
                         <h6 className='text-secondary mb-4'>Minimum Order Quantity : {moq} pcs</h6>
 
                         {<div className='mt-auto' >
-                            <CommonButton onClick={() => navigateToInventory(_id)} variant="danger" className=''>Order Now<img className='ms-3' src={order1} alt="" /></CommonButton>
+                            <Button onClick={() => navigateToPurchasePage(_id)} className='common-btn border-0 rounded-pill px-5 hover1 w-100'>Order Now<img className='ms-2' src={order1} alt="" /></Button>
                         </div>}
                     </Card.Body>
                 </Card>
