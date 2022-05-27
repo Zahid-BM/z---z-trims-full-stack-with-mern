@@ -11,7 +11,7 @@ const Reviews = () => {
         <>
             <Container className='my-5 shadow-lg pb-5 bg-light'>
                 <h1 className='text-center text-success fw-bold display-md-3 pt-5'>Customer's Reviews <img src={userReviewImg} alt="" /></h1>
-                <h6 className='text-center text-success mb-2'>See what our customers say about us</h6>
+                <h6 className='text-center text-warning mb-2'>See what our customers say about us</h6>
                 {reviews.length ?
                     <Row>
 
