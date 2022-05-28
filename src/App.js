@@ -11,6 +11,8 @@ import MyPortFolio from './Pages/MyPortFolio/MyPortFolio';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import RequireAuth from './Pages/Login/RequireAuth';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
         <Route path='/home' element={<Home />}></Route>
         <Route path='/blogs' element={<Blogs />}></Route>
         <Route path='/portfolio' element={<MyPortFolio />}></Route>
+        <Route path='/dashboard' element={<Dashboard />}></Route>
         <Route path='/purchase/:id' element={
           <RequireAuth>
             <Purchase />
@@ -29,6 +32,7 @@ function App() {
         </Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
+        <Route path='*' element={<NotFound />}></Route>
       </Routes>
     </div>
   );
