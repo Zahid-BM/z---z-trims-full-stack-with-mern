@@ -8,7 +8,7 @@ import auth from '../../firebase.init';
 import useToken from '../../hooks/useToken';
 import Loading from '../Shared/Loading/Loading';
 import SocialLogin from '../Shared/Loading/SocialLogin/SocialLogin';
-import login from '../../images/denim-2426902_1920.jpg';
+import login from '../../images/register.png';
 
 
 
@@ -67,7 +67,7 @@ const Login = () => {
                     <Col lg={8}>
                         <img className='img-fluid rounded-3 h-100' src={login} alt="" />
                     </Col>
-                    <Col className='my-auto shadow p-5 bg-light' lg={4}>
+                    <Col className='shadow p-5 bg-light' lg={4}>
                         <h2 className='text-center text-success'>Login</h2>
                         <Form onSubmit={handleFormSubmit}>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -88,7 +88,7 @@ const Login = () => {
                                 Login
                             </Button>
                         </Form>
-                        <p className='my-4'><small>New to Z&Z Trims ?</small> <Link to='/register' className='text-info text-decoration-none'>Register</Link></p>
+                        <p className='my-4'><small>New to Z&Z Trims ?</small> <Link to='/register' className='text-decoration-none'>Register</Link></p>
                         <SocialLogin></SocialLogin>
                         <ToastContainer></ToastContainer>
                     </Col>

@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import useToken from '../../hooks/useToken';
 import Loading from '../Shared/Loading/Loading';
-import SocialLogin from '../Shared/Loading/SocialLogin/SocialLogin';
+import register from '../../images/8mm-Metal-Rivet-for-Denim-Jeans-Clothing-Accessories.webp';
 
 const Register = () => {
     const userNameRef = useRef('');
@@ -47,14 +47,13 @@ const Register = () => {
     };
 
     return (
-        <Container className='my-5'>
-            <h1 className='text-center text-danger display-4 fw-bold'>Please Register to Fruits Valley <img className='me-4' src={'image11'} alt="" /></h1>
+        <Container fluid>
             <Row>
-                <Col lg={7}>
-                    <img className='w-100 login-register-img' src={'image10'} alt="" />
+                <Col lg={8}>
+                    <img className='w-100 h-100' src={register} alt="" />
                 </Col>
-                <Col className=' container p-4 shadow my-auto rounded' lg={5}>
-                    <h2 className='text-center text-danger'>Register</h2>
+                <Col className=' container p-5 shadow rounded bg-light' lg={4}>
+                    <h2 className='text-center text-success'>Register</h2>
                     <Form onSubmit={handleFormSubmit}>
                         <Form.Group className="mb-3" controlId="formBasicEmail1">
                             <Form.Label>Your Name</Form.Label>
@@ -64,7 +63,7 @@ const Register = () => {
                             <Form.Label>Email address</Form.Label>
                             <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
                             <Form.Text className="text-muted">
-                                We'll never share your email with anyone else.
+                                Your email address will be secured. No worries .
                             </Form.Text>
                         </Form.Group>
 
@@ -73,19 +72,18 @@ const Register = () => {
                             <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                            <Form.Check onChange={handleCheckBox} type="checkbox" label="Agree with Fruits Warehouse terms and condition ?" />
+                            <Form.Check onChange={handleCheckBox} type="checkbox" label="Agree with Z&Z Trims terms and condition ?" />
                         </Form.Group>
                         <p className='text-danger'>{error?.message || profileError?.message}</p>
                         {
-                            condition ? <Button variant="danger" type="submit">
+                            condition ? <Button className='d-block w-100 common-btn border-0 hover1' type="submit">
                                 Submit
-                            </Button> : <Button disabled variant="danger" type="submit">
+                            </Button> : <Button disabled className='d-block w-100 common-btn border-0 hover1' type="submit">
                                 Submit
                             </Button>
                         }
                     </Form>
                     <p className='my-4'>Already have an account ? <Link to='/login' className='text-warning text-decoration-none '> <span className='text-success'>Login</span></Link></p>
-                    <SocialLogin></SocialLogin>
                     <ToastContainer />
 
                 </Col>
