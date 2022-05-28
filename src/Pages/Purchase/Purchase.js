@@ -1,15 +1,26 @@
 import React, { useState } from 'react';
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Card, Col, Container, Form, Row } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
+import auth from '../../firebase.init';
 import usePurchaseItem from '../../hooks/usePurchaseItem';
 
 const Purchase = () => {
     const { id } = useParams();
     const [counter, setCounter] = useState(0);
     const [purchaseItem] = usePurchaseItem(id, counter);
-    console.log(purchaseItem);
+    const [user, error, loading] = useAuthState(auth);
+    const { register, formState: { errors }, handleSubmit, reset } = useForm();
+
+
+    const onSubmit = data => {
+        console.log(data)
+        reset();
+    };
 
     return (
+
         <>
             <Container>
                 <Row>
@@ -27,7 +38,168 @@ const Purchase = () => {
                         </Card>
                     </Col>
                     <Col lg={6}>
+                        <form className='p-5 bg-light shadow' onSubmit={handleSubmit(onSubmit)}>
+                            <h4 className='text-center'>Order Form</h4>
+                            <div className="mb-3">
+                                <input
+                                    type="email"
+                                    className="form-control"
+                                    id="exampleInputEmail1"
+                                    value={user.displayName}
+                                    aria-describedby="emailHelp" {...register("email")}
+                                />
 
+                                <div id="emailHelp" className="form-text text-danger">
+                                    {errors.email?.type === 'required' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
+                                    {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
+                                </div>
+                            </div>
+                            <div className="mb-3">
+                                <label for="exampleInputEmail1" className="form-label">Email address</label>
+                                <input
+                                    type="email"
+                                    className="form-control"
+                                    id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" {...register("email",
+                                        {
+                                            required: {
+                                                value: true,
+                                                message: 'Email is required'
+                                            },
+                                            pattern: {
+                                                value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+                                                message: 'Provide a valid email address'
+                                            }
+                                        })}
+                                />
+
+                                <div id="emailHelp" className="form-text text-danger">
+                                    {errors.email?.type === 'required' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
+                                    {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
+                                </div>
+                            </div>
+                            <div className="mb-3">
+                                <label for="exampleInputEmail1" className="form-label">Email address</label>
+                                <input
+                                    type="email"
+                                    className="form-control"
+                                    id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" {...register("email",
+                                        {
+                                            required: {
+                                                value: true,
+                                                message: 'Email is required'
+                                            },
+                                            pattern: {
+                                                value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+                                                message: 'Provide a valid email address'
+                                            }
+                                        })}
+                                />
+
+                                <div id="emailHelp" className="form-text text-danger">
+                                    {errors.email?.type === 'required' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
+                                    {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
+                                </div>
+                            </div>
+                            <div className="mb-3">
+                                <label for="exampleInputEmail1" className="form-label">Email address</label>
+                                <input
+                                    type="email"
+                                    className="form-control"
+                                    id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" {...register("email",
+                                        {
+                                            required: {
+                                                value: true,
+                                                message: 'Email is required'
+                                            },
+                                            pattern: {
+                                                value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+                                                message: 'Provide a valid email address'
+                                            }
+                                        })}
+                                />
+
+                                <div id="emailHelp" className="form-text text-danger">
+                                    {errors.email?.type === 'required' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
+                                    {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
+                                </div>
+                            </div>
+                            <div className="mb-3">
+                                <label for="exampleInputEmail1" className="form-label">Email address</label>
+                                <input
+                                    type="email"
+                                    className="form-control"
+                                    id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" {...register("email",
+                                        {
+                                            required: {
+                                                value: true,
+                                                message: 'Email is required'
+                                            },
+                                            pattern: {
+                                                value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+                                                message: 'Provide a valid email address'
+                                            }
+                                        })}
+                                />
+
+                                <div id="emailHelp" className="form-text text-danger">
+                                    {errors.email?.type === 'required' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
+                                    {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
+                                </div>
+                            </div>
+                            <div className="mb-3">
+                                <label for="exampleInputEmail1" className="form-label">Email address</label>
+                                <input
+                                    type="email"
+                                    className="form-control"
+                                    id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" {...register("email",
+                                        {
+                                            required: {
+                                                value: true,
+                                                message: 'Email is required'
+                                            },
+                                            pattern: {
+                                                value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+                                                message: 'Provide a valid email address'
+                                            }
+                                        })}
+                                />
+
+                                <div id="emailHelp" className="form-text text-danger">
+                                    {errors.email?.type === 'required' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
+                                    {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
+                                </div>
+                            </div>
+                            <div className="mb-3">
+                                <label for="exampleInputEmail1" className="form-label">Email address</label>
+                                <input
+                                    type="email"
+                                    className="form-control"
+                                    id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" {...register("email",
+                                        {
+                                            required: {
+                                                value: true,
+                                                message: 'Email is required'
+                                            },
+                                            pattern: {
+                                                value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+                                                message: 'Provide a valid email address'
+                                            }
+                                        })}
+                                />
+
+                                <div id="emailHelp" className="form-text text-danger">
+                                    {errors.email?.type === 'required' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
+                                    {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
+                                </div>
+                            </div>
+                            <input className='btn btn-success' type="submit" value={'Order'} />
+                        </form>
                     </Col>
                 </Row>
             </Container>
