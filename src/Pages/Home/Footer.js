@@ -59,33 +59,33 @@ const Footer = () => {
                         <Col className='my-auto' lg={3}>
                             <div className='text-center text-white py-5'>
                                 <h5 className='text-black'>Download our Apps</h5>
-                                <a target="_blank" href='https://www.apple.com/app-store/' rel="noreferrer" ><img className='m-2 hover2' src={appImage1} alt="" /></a>
-                                <a target="_blank" href='https://play.google.com/store/apps' rel="noreferrer" ><img className='m-2 hover2' src={appImage2} alt="" /></a>
+                                <a target="_blank" href='https://www.apple.com/app-store/' rel="noreferrer" ><img className='m-2 hover1' src={appImage1} alt="" /></a>
+                                <a target="_blank" href='https://play.google.com/store/apps' rel="noreferrer" ><img className='m-2 hover1' src={appImage2} alt="" /></a>
                             </div>
                         </Col>
                         <Col className='my-auto' lg={3}>
                             <div className='text-center text-black py-5'>
                                 <h5 className='text-black'>Find us on</h5>
-                                <img className='m-2 hover2' src={appImage3} alt="" />
-                                <img className='m-2 hover2' src={appImage4} alt="" />
-                                <img className='m-2 hover2' src={appImage5} alt="" />
+                                <img className='m-2 hover1' src={appImage3} alt="" />
+                                <img className='m-2 hover1' src={appImage4} alt="" />
+                                <img className='m-2 hover1' src={appImage5} alt="" />
 
                             </div>
                         </Col>
                         <Col className='my-auto' lg={3}>
                             <div className='text-center py-5'>
                                 <h5 className='text-black'>Global Branches</h5>
-                                <img className='m-2 hover2' src={bangladesh} alt="" />
-                                <img className='m-2 hover2' src={united} alt="" />
-                                <img className='m-2 hover2' src={japan} alt="" />
+                                <img className='m-2 hover1' src={bangladesh} alt="" />
+                                <img className='m-2 hover1' src={united} alt="" />
+                                <img className='m-2 hover1' src={japan} alt="" />
                             </div>
                         </Col>
                         <Col className='my-auto' lg={3}>
                             <div className='text-center py-5'>
                                 <h5 className='text-black'>Official Partner</h5>
-                                <img className='m-2 hover2' src={nike} alt="" />
-                                <img className='m-2 hover2' src={levis} alt="" />
-                                <img className='m-2 hover2' src={puma} alt="" />
+                                <img className='m-2 hover1' src={nike} alt="" />
+                                <img className='m-2 hover1' src={levis} alt="" />
+                                <img className='m-2 hover1' src={puma} alt="" />
                             </div>
                         </Col>
                     </Row>
