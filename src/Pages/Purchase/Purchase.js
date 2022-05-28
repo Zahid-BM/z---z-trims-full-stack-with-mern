@@ -39,26 +39,23 @@ const Purchase = () => {
                     </Col>
                     <Col lg={6}>
                         <form className='p-5 bg-light shadow' onSubmit={handleSubmit(onSubmit)}>
-                            <h4 className='text-center'>Order Form</h4>
+                            <h4 className='text-center fw-bolder text-success'>Order Form</h4>
                             <div className="mb-3">
+                                <label for="exampleInputEmail1" className="form-label text-success"><small>Your Name</small></label>
                                 <input
+                                    readOnly
                                     type="email"
-                                    className="form-control"
+                                    className="form-control text-center"
                                     id="exampleInputEmail1"
-                                    value={user.displayName}
+                                    value={user?.displayName}
                                     aria-describedby="emailHelp" {...register("email")}
                                 />
-
-                                <div id="emailHelp" className="form-text text-danger">
-                                    {errors.email?.type === 'required' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
-                                    {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
-                                </div>
                             </div>
                             <div className="mb-3">
-                                <label for="exampleInputEmail1" className="form-label">Email address</label>
+                                <label for="exampleInputEmail1" className="form-label"><small>Email address</small></label>
                                 <input
                                     type="email"
-                                    className="form-control"
+                                    className="form-control text-center"
                                     id="exampleInputEmail1"
                                     aria-describedby="emailHelp" {...register("email",
                                         {
@@ -79,10 +76,10 @@ const Purchase = () => {
                                 </div>
                             </div>
                             <div className="mb-3">
-                                <label for="exampleInputEmail1" className="form-label">Email address</label>
+                                <label for="exampleInputEmail1" className="form-label"><small>Email address</small></label>
                                 <input
                                     type="email"
-                                    className="form-control"
+                                    className="form-control text-center"
                                     id="exampleInputEmail1"
                                     aria-describedby="emailHelp" {...register("email",
                                         {
@@ -103,10 +100,10 @@ const Purchase = () => {
                                 </div>
                             </div>
                             <div className="mb-3">
-                                <label for="exampleInputEmail1" className="form-label">Email address</label>
+                                <label for="exampleInputEmail1" className="form-label"><small>Email address</small></label>
                                 <input
                                     type="email"
-                                    className="form-control"
+                                    className="form-control text-center"
                                     id="exampleInputEmail1"
                                     aria-describedby="emailHelp" {...register("email",
                                         {
@@ -127,10 +124,10 @@ const Purchase = () => {
                                 </div>
                             </div>
                             <div className="mb-3">
-                                <label for="exampleInputEmail1" className="form-label">Email address</label>
+                                <label for="exampleInputEmail1" className="form-label"><small>Email address</small></label>
                                 <input
                                     type="email"
-                                    className="form-control"
+                                    className="form-control text-center"
                                     id="exampleInputEmail1"
                                     aria-describedby="emailHelp" {...register("email",
                                         {
@@ -151,10 +148,10 @@ const Purchase = () => {
                                 </div>
                             </div>
                             <div className="mb-3">
-                                <label for="exampleInputEmail1" className="form-label">Email address</label>
+                                <label for="exampleInputEmail1" className="form-label"><small>Email address</small></label>
                                 <input
                                     type="email"
-                                    className="form-control"
+                                    className="form-control text-center"
                                     id="exampleInputEmail1"
                                     aria-describedby="emailHelp" {...register("email",
                                         {
@@ -175,10 +172,10 @@ const Purchase = () => {
                                 </div>
                             </div>
                             <div className="mb-3">
-                                <label for="exampleInputEmail1" className="form-label">Email address</label>
+                                <label for="exampleInputEmail1" className="form-label"><small>Email address</small></label>
                                 <input
                                     type="email"
-                                    className="form-control"
+                                    className="form-control text-center"
                                     id="exampleInputEmail1"
                                     aria-describedby="emailHelp" {...register("email",
                                         {
