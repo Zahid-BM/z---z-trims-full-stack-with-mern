@@ -40,162 +40,86 @@ const Purchase = () => {
                     <Col lg={6}>
                         <form className='p-5 bg-light shadow' onSubmit={handleSubmit(onSubmit)}>
                             <h4 className='text-center fw-bolder text-success'>Order Form</h4>
-                            <div className="mb-3">
-                                <label for="exampleInputEmail1" className="form-label text-success"><small>Your Name</small></label>
-                                <input
-                                    readOnly
-                                    type="email"
-                                    className="form-control text-center"
-                                    id="exampleInputEmail1"
+
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                <Form.Label><small>Your Name</small> </Form.Label>
+                                <Form.Control
+                                    className='text-center'
                                     value={user?.displayName}
-                                    aria-describedby="emailHelp" {...register("email")}
+                                    readOnly
+                                    {...register("name")}
                                 />
-                            </div>
-                            <div className="mb-3">
-                                <label for="exampleInputEmail1" className="form-label"><small>Email address</small></label>
-                                <input
-                                    type="email"
-                                    className="form-control text-center"
-                                    id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" {...register("email",
+                            </Form.Group>
+
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                <Form.Label><small>Your Email</small> </Form.Label>
+                                <Form.Control
+                                    className='text-center'
+                                    value={user?.email}
+                                    readOnly
+                                    {...register("email")}
+                                />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                <Form.Label><small>Your Phone</small> </Form.Label>
+                                <Form.Control
+                                    className='text-center'
+                                    type="number"
+                                    required
+                                    {...register("phone")}
+                                />
+                            </Form.Group>
+
+
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                                <Form.Label><small>Your Address</small></Form.Label>
+                                <Form.Control as="textarea" rows={3}
+                                    required
+                                    type="text"
+                                    className='text-center'
+                                    {...register("address")}
+                                />
+                            </Form.Group>
+
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                <Form.Label><small>Product Name</small></Form.Label>
+                                <Form.Control
+                                    className='text-center'
+                                    value={purchaseItem?.name}
+                                    readOnly
+                                    {...register("productName")}
+                                />
+                            </Form.Group>
+
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                <Form.Label>Order Quantity</Form.Label>
+                                <Form.Control
+                                    type="number"
+                                    {...register("orderQuantity",
                                         {
                                             required: {
                                                 value: true,
-                                                message: 'Email is required'
+                                                message: 'Order Quantity is required'
                                             },
-                                            pattern: {
-                                                value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
-                                                message: 'Provide a valid email address'
-                                            }
+                                            min: {
+                                                value: purchaseItem.moq,
+                                                message: `Minimum Order Quantity is ${purchaseItem.moq}`
+                                            },
+                                            max: {
+                                                value: purchaseItem.quantity,
+                                                message: `Maximum Order Quantity is ${purchaseItem.quantity}`
+                                            },
                                         })}
                                 />
-
-                                <div id="emailHelp" className="form-text text-danger">
-                                    {errors.email?.type === 'required' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
-                                    {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
-                                </div>
-                            </div>
-                            <div className="mb-3">
-                                <label for="exampleInputEmail1" className="form-label"><small>Email address</small></label>
-                                <input
-                                    type="email"
-                                    className="form-control text-center"
-                                    id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" {...register("email",
-                                        {
-                                            required: {
-                                                value: true,
-                                                message: 'Email is required'
-                                            },
-                                            pattern: {
-                                                value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
-                                                message: 'Provide a valid email address'
-                                            }
-                                        })}
-                                />
-
-                                <div id="emailHelp" className="form-text text-danger">
-                                    {errors.email?.type === 'required' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
-                                    {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
-                                </div>
-                            </div>
-                            <div className="mb-3">
-                                <label for="exampleInputEmail1" className="form-label"><small>Email address</small></label>
-                                <input
-                                    type="email"
-                                    className="form-control text-center"
-                                    id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" {...register("email",
-                                        {
-                                            required: {
-                                                value: true,
-                                                message: 'Email is required'
-                                            },
-                                            pattern: {
-                                                value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
-                                                message: 'Provide a valid email address'
-                                            }
-                                        })}
-                                />
-
-                                <div id="emailHelp" className="form-text text-danger">
-                                    {errors.email?.type === 'required' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
-                                    {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
-                                </div>
-                            </div>
-                            <div className="mb-3">
-                                <label for="exampleInputEmail1" className="form-label"><small>Email address</small></label>
-                                <input
-                                    type="email"
-                                    className="form-control text-center"
-                                    id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" {...register("email",
-                                        {
-                                            required: {
-                                                value: true,
-                                                message: 'Email is required'
-                                            },
-                                            pattern: {
-                                                value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
-                                                message: 'Provide a valid email address'
-                                            }
-                                        })}
-                                />
-
-                                <div id="emailHelp" className="form-text text-danger">
-                                    {errors.email?.type === 'required' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
-                                    {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
-                                </div>
-                            </div>
-                            <div className="mb-3">
-                                <label for="exampleInputEmail1" className="form-label"><small>Email address</small></label>
-                                <input
-                                    type="email"
-                                    className="form-control text-center"
-                                    id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" {...register("email",
-                                        {
-                                            required: {
-                                                value: true,
-                                                message: 'Email is required'
-                                            },
-                                            pattern: {
-                                                value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
-                                                message: 'Provide a valid email address'
-                                            }
-                                        })}
-                                />
-
-                                <div id="emailHelp" className="form-text text-danger">
-                                    {errors.email?.type === 'required' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
-                                    {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
-                                </div>
-                            </div>
-                            <div className="mb-3">
-                                <label for="exampleInputEmail1" className="form-label"><small>Email address</small></label>
-                                <input
-                                    type="email"
-                                    className="form-control text-center"
-                                    id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" {...register("email",
-                                        {
-                                            required: {
-                                                value: true,
-                                                message: 'Email is required'
-                                            },
-                                            pattern: {
-                                                value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
-                                                message: 'Provide a valid email address'
-                                            }
-                                        })}
-                                />
-
-                                <div id="emailHelp" className="form-text text-danger">
-                                    {errors.email?.type === 'required' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
-                                    {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-600">{errors?.email?.message}</span>}
-                                </div>
-                            </div>
-                            <input className='btn btn-success' type="submit" value={'Order'} />
+                                <Form.Label>
+                                    <small className='text-danger mt-2'>
+                                        {errors.orderQuantity?.type === 'required' && errors?.orderQuantity?.message}
+                                        {errors.orderQuantity?.type === 'min' && errors?.orderQuantity?.message}
+                                        {errors.orderQuantity?.type === 'max' && errors?.orderQuantity?.message}
+                                    </small>
+                                </Form.Label>
+                            </Form.Group>
+                            <input disabled={errors.orderQuantity?.type === 'min' || errors.orderQuantity?.type === 'required' || errors.orderQuantity?.type === 'max'} className='text-center d-block mt-4 w-50 mx-auto base-bg border-0 rounded-3 py-2 text-white' value={'Order'} type="Submit" />
                         </form>
                     </Col>
                 </Row>
