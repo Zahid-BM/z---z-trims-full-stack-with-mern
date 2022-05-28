@@ -41,9 +41,9 @@ const Header = () => {
                             <LinkContainer to='/blogs'>
                                 <NavLink>Blogs</NavLink>
                             </LinkContainer>
-
-
-
+                            <LinkContainer to='/portfolio'>
+                                <NavLink>My Portfolio</NavLink>
+                            </LinkContainer>
                         </Nav>
                         <Nav>
 

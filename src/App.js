@@ -6,6 +6,7 @@ import '../src/Pages/common.css';
 import { Route, Routes } from 'react-router-dom';
 import Purchase from './Pages/Purchase/Purchase';
 import Blogs from './Pages/Blogs/Blogs';
+import MyPortFolio from './Pages/MyPortFolio/MyPortFolio';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/' element={<Home />}></Route>
         <Route path='/home' element={<Home />}></Route>
         <Route path='/blogs' element={<Blogs />}></Route>
+        <Route path='/portfolio' element={<MyPortFolio />}></Route>
         <Route path='/purchase/:id' element={<Purchase />}></Route>
       </Routes>
     </div>
