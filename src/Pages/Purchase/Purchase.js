@@ -22,7 +22,7 @@ const Purchase = () => {
     return (
 
         <>
-            <Container>
+            <Container className='my-3'>
                 <Row>
                     <Col lg={6}>
                         <Card className='h-100 shadow bg-light' /* style={{width: '18rem'}} */>
@@ -42,7 +42,7 @@ const Purchase = () => {
                             <h4 className='text-center fw-bolder text-success'>Order Form</h4>
 
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                <Form.Label><small>Your Name</small> </Form.Label>
+                                <Form.Label><small className='text-success'>Your Name</small> </Form.Label>
                                 <Form.Control
                                     className='text-center'
                                     value={user?.displayName}
@@ -52,7 +52,7 @@ const Purchase = () => {
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                <Form.Label><small>Your Email</small> </Form.Label>
+                                <Form.Label><small className='text-success'>Your Email</small> </Form.Label>
                                 <Form.Control
                                     className='text-center'
                                     value={user?.email}
@@ -61,7 +61,7 @@ const Purchase = () => {
                                 />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                <Form.Label><small>Your Phone</small> </Form.Label>
+                                <Form.Label><small className='text-success'>Your Phone</small> </Form.Label>
                                 <Form.Control
                                     className='text-center'
                                     type="number"
@@ -72,7 +72,7 @@ const Purchase = () => {
 
 
                             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                <Form.Label><small>Your Address</small></Form.Label>
+                                <Form.Label><small className='text-success'>Your Address</small></Form.Label>
                                 <Form.Control as="textarea" rows={3}
                                     required
                                     type="text"
@@ -82,7 +82,7 @@ const Purchase = () => {
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                <Form.Label><small>Product Name</small></Form.Label>
+                                <Form.Label><small className='text-success'>Product Name</small></Form.Label>
                                 <Form.Control
                                     className='text-center'
                                     value={purchaseItem?.name}
@@ -92,7 +92,7 @@ const Purchase = () => {
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                <Form.Label>Order Quantity</Form.Label>
+                                <Form.Label><small className='text-success'>Order Quantity</small></Form.Label>
                                 <Form.Control
                                     type="number"
                                     {...register("orderQuantity",
