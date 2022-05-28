@@ -1,5 +1,5 @@
-import React, { useRef, useState } from 'react';
-import { Button, Col, Container, Form, Row, ToastContainer } from 'react-bootstrap';
+import React, { useEffect, useRef, useState } from 'react';
+import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -24,9 +24,11 @@ const Register = () => {
     const [updateProfile, profileError] = useUpdateProfile(auth);
     const [token] = useToken(user);
 
-    if (token) {
-        navigate('/');
-    };
+    useEffect(() => {
+        if (token) {
+            navigate('/');
+        };
+    }, [user, token, navigate]);
 
     const handleCheckBox = event => {
         const agree = event.target.checked;
@@ -84,8 +86,6 @@ const Register = () => {
                         }
                     </Form>
                     <p className='my-4'>Already have an account ? <Link to='/login' className='text-warning text-decoration-none '> <span className='text-success'>Login</span></Link></p>
-                    <ToastContainer />
-
                 </Col>
             </Row>
         </Container>

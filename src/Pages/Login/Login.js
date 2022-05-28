@@ -1,14 +1,14 @@
 import { async } from '@firebase/util';
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
 import useToken from '../../hooks/useToken';
 import Loading from '../Shared/Loading/Loading';
 import SocialLogin from '../Shared/Loading/SocialLogin/SocialLogin';
 import login from '../../images/register.png';
+import { toast } from 'react-toastify';
 
 
 
@@ -29,19 +29,20 @@ const Login = () => {
     const [sendPasswordResetEmail, sending, resetPassError] = useSendPasswordResetEmail(auth); /* clean code */
     const [token] = useToken(user);
 
-    if (token) {
-        navigate(from, { replace: true });
-    };
+
+    useEffect(() => {
+        if (token) {
+            navigate(from, { replace: true });
+        };
+    }, [user, token, location, navigate, from]);
 
     const handleFormSubmit = async event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         await signInWithEmailAndPassword(email, password);
+        toast('login success. You can now see the private/protected routes.');
 
-        if (user) {
-            toast('login success');
-        }
     };
     if (loading || sending) {
         return <Loading></Loading>;
@@ -90,7 +91,6 @@ const Login = () => {
                         </Form>
                         <p className='my-4'><small>New to Z&Z Trims ?</small> <Link to='/register' className='text-decoration-none'>Register</Link></p>
                         <SocialLogin></SocialLogin>
-                        <ToastContainer></ToastContainer>
                     </Col>
                 </Row>
 

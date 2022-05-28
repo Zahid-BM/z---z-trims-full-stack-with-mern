@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Button } from 'react-bootstrap';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -17,10 +17,11 @@ const SocialLogin = () => {
     const from = location.state?.from?.pathname || "/";
 
 
-
-    if (token) {
-        navigate(from, { replace: true });
-    };
+    useEffect(() => {
+        if (token) {
+            navigate(from, { replace: true });
+        };
+    }, [user, user1, token, location, navigate, from]);
     const handleGoogleSignIn = () => {
         signInWithGoogle();
     };
