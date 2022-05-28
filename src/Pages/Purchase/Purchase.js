@@ -16,7 +16,7 @@ const Purchase = () => {
                     <Col lg={6}>
                         <Card className='h-100 shadow bg-light' /* style={{width: '18rem'}} */>
                             <Card.Img className='fluid' variant="top" src={purchaseItem.img} />
-                            <Card.Body className='p-4 d-flex flex-column'>
+                            <Card.Body className='p-4 d-flex flex-column base-bg'>
                                 <Card.Title className='text-success text-center fs-3'>{purchaseItem.name}</Card.Title>
                                 <ul className="list-group list-group-flush  ">
                                     <li className="list-group-item mb-3 base-bg text-center rounded "><b className='text-warning'>Price :</b>   <span className='text-white fw-bolder'>$ {purchaseItem.price}</span> <span className='fw-bolder text-warning'>/pcs</span></li>
