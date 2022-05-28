@@ -27,6 +27,7 @@ const Register = () => {
     useEffect(() => {
         if (token) {
             navigate('/');
+            toast('Account creation done !!!!');
         };
     }, [user, token, navigate]);
 
@@ -42,7 +43,7 @@ const Register = () => {
         const password = passwordRef.current.value;
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: userName });
-        toast('Account creation done !!!!');
+
     };
     if (loading) {
         return <Loading></Loading>;

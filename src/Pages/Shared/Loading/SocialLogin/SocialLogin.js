@@ -6,6 +6,7 @@ import Loading from '../Loading';
 import auth from '../../../../firebase.init';
 import useToken from '../../../../hooks/useToken';
 import google from '../../../../images/google.png'
+import { toast } from 'react-toastify';
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -20,6 +21,7 @@ const SocialLogin = () => {
     useEffect(() => {
         if (token) {
             navigate(from, { replace: true });
+            toast('Account access given')
         };
     }, [user, user1, token, location, navigate, from]);
     const handleGoogleSignIn = () => {
