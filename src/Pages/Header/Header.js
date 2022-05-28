@@ -51,23 +51,18 @@ const Header = () => {
                             {
                                 user && <>
 
-                                    <LinkContainer to='/requesteditems'>
-                                        <NavLink> Requested Items</NavLink>
+                                    <LinkContainer to='/dashboard'>
+                                        <NavLink>Dashboard</NavLink>
                                     </LinkContainer>
-                                    <LinkContainer to='/requestitem'>
-                                        <NavLink> Request Item</NavLink>
-                                    </LinkContainer>
-                                    <LinkContainer to='/myitems'>
-                                        <NavLink>My Items</NavLink>
-                                    </LinkContainer>
-
-
                                 </>
                             }
 
                             {
                                 user ?
-                                    <Button onClick={handleLogout} className='text-decoration-none' variant="outline-light">Logout</Button>
+                                    <>
+                                        <Button onClick={handleLogout} className='text-decoration-none' variant="outline-warning">Logout</Button>
+                                        <p className='my-auto text-warning ms-2 fw-bold'>{user?.displayName}</p>
+                                    </>
 
                                     : <LinkContainer to='/login'>
                                         <NavLink><Button variant='outline-light'>Login</Button></NavLink>
