@@ -7,6 +7,8 @@ import { Route, Routes } from 'react-router-dom';
 import Purchase from './Pages/Purchase/Purchase';
 import Blogs from './Pages/Blogs/Blogs';
 import MyPortFolio from './Pages/MyPortFolio/MyPortFolio';
+import Login from './Pages/Login/Login';
+import Register from './Pages/Register/Register';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path='/blogs' element={<Blogs />}></Route>
         <Route path='/portfolio' element={<MyPortFolio />}></Route>
         <Route path='/purchase/:id' element={<Purchase />}></Route>
+        <Route path='/login' element={<Login />}></Route>
+        <Route path='/register' element={<Register />}></Route>
       </Routes>
     </div>
   );
