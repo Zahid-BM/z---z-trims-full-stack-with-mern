@@ -10,8 +10,7 @@ import usePurchaseItem from '../../hooks/usePurchaseItem';
 
 const Purchase = () => {
     const { id } = useParams();
-    const [counter, setCounter] = useState(0);
-    const [purchaseItem] = usePurchaseItem(id, counter);
+    const [purchaseItem] = usePurchaseItem(id);
     const [user] = useAuthState(auth);
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
 

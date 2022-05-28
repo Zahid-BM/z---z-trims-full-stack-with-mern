@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
 
-const usePurchaseItem = (id, counter) => {
+const usePurchaseItem = (id) => {
     const [purchaseItem, setPurchaseItem] = useState({});
     useEffect(() => {
         const getItemById = async () => {
@@ -10,7 +10,7 @@ const usePurchaseItem = (id, counter) => {
             setPurchaseItem(data);
         }
         getItemById();
-    }, [id, counter])
+    }, [id])
     return [purchaseItem, setPurchaseItem];
 };
 export default usePurchaseItem;
