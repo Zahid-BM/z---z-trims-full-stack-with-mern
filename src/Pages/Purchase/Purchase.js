@@ -1,8 +1,10 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { Card, Col, Container, Form, Row } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import usePurchaseItem from '../../hooks/usePurchaseItem';
 
@@ -10,13 +12,28 @@ const Purchase = () => {
     const { id } = useParams();
     const [counter, setCounter] = useState(0);
     const [purchaseItem] = usePurchaseItem(id, counter);
-    const [user, error, loading] = useAuthState(auth);
+    const [user] = useAuthState(auth);
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
 
     const onSubmit = data => {
-        console.log(data)
-        reset();
+        const order = data;
+        console.log(order)
+
+        const url = 'http://localhost:5000/orders';
+
+        axios.post(url, order)
+            .then(res => {
+                const { data } = res;
+                console.log(data)
+                if (data.insertedId) {
+                    toast('Success !!! Your Order will be reviewed by an admin. For update visit My Orders page');
+                    reset();
+                }
+            })
+            .catch(error => {
+                console.dir(error)
+            })
     };
 
     return (
@@ -102,12 +119,12 @@ const Purchase = () => {
                                                 message: 'Order Quantity is required'
                                             },
                                             min: {
-                                                value: purchaseItem.moq,
-                                                message: `Minimum Order Quantity is ${purchaseItem.moq}`
+                                                value: purchaseItem?.moq,
+                                                message: `Minimum Order Quantity is ${purchaseItem?.moq}`
                                             },
                                             max: {
-                                                value: purchaseItem.quantity,
-                                                message: `Maximum Order Quantity is ${purchaseItem.quantity}`
+                                                value: purchaseItem?.quantity,
+                                                message: `Maximum Order Quantity is ${purchaseItem?.quantity}`
                                             },
                                         })}
                                 />
