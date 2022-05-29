@@ -6,6 +6,8 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import payment from '../../images/payment.png';
+import cancel from '../../images/cancel.png';
 
 const MyOrders = () => {
     const [user] = useAuthState(auth);
@@ -75,8 +77,8 @@ const MyOrders = () => {
                                     <td><small>{user?.email}</small></td>
                                     <td><small>{order?.productName}</small></td>
                                     <td><small>{order?.orderQuantity}</small></td>
-                                    <td><Button className='base-bg text-white'>Pay Now</Button></td>
-                                    <td><img onClick={() => handleCancelBtn(order?._id)} className='hover1 w-25' src={'image1'} alt="" /></td>
+                                    <td><Button className='base-bg text-white border-0 btn-sm'>Pay <img src={payment} alt="" /></Button></td>
+                                    <td><img onClick={() => handleCancelBtn(order?._id)} src={cancel} alt="" /></td>
                                 </tr>)
                             }
                         </tbody>
