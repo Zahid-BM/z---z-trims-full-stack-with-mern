@@ -7,8 +7,8 @@ const Dashboard = () => {
     return (
         <Container fluid>
             <Row>
-                <Col className='base-bg' lg={2}>
-                    <ListGroup className='w-100 text-decoration-none vh-lg-100'>
+                <Col className='base-bg ' lg={2}>
+                    <ListGroup className='w-100 text-decoration-none vh-lg-100 sticky-top'>
                         <Link to={'/dashboard/myorders'}> <ListGroup.Item className='base-bg' variant='success' action>
                             My Orders
                         </ListGroup.Item></Link>
