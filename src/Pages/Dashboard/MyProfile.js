@@ -31,12 +31,12 @@ const MyProfile = () => {
     return (
         <>
             <Container fluid >
-                <h1 className='text-center fw-bold text-warning'>Add a Review about us</h1>
-                <p className='text-center fw-bold text-success'>We would love to accept your feedback to serve even better</p>
+                <h1 className='text-center fw-bold text-warning'>My Profile</h1>
+                <p className='text-center fw-bold text-secondary'>This is your profile. You can add your profile to our database and update too</p>
                 <Row>
 
                     <Col lg={7}>
-                        <form className='p-5 bg-light shadow rounded my-2' onSubmit={handleSubmit(onSubmit)}>
+                        <form className='p-5 bg-secondary shadow rounded my-2' onSubmit={handleSubmit(onSubmit)}>
                             <h4 className='text-center fw-bolder text-warning'>My Profile Add Form</h4>
 
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">

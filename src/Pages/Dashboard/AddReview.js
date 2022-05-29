@@ -5,6 +5,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import review from '../../images/review.png'
 
 const AddReview = () => {
     const [user] = useAuthState(auth);
@@ -34,13 +35,13 @@ const AddReview = () => {
         <>
             <Container className='my-3'>
                 <h1 className='text-center fw-bold text-warning'>Add a Review about us</h1>
-                <p className='text-center fw-bold text-success'>We would love to accept your feedback to serve even better</p>
+                <p className='text-center fw-bold text-secondary'>We would love to accept your feedback to serve even better</p>
                 <Row>
                     <Col lg={7}>
-                        <img className='w-100 h-100 rounded' src="https://img.freepik.com/free-photo/hand-touching-doing-mark-five-yellow-stars-black-background-best-customer-satisfaction-evaluation-good-quality-product-service_616485-33.jpg?w=740&t=st=1653830148~exp=1653830748~hmac=7d75f5a962a39812bc1d37d25492b405ddf75da4310606e5220abf79c03d6f38" alt="" />
+                        <img className='w-100 h-100 rounded' src={review} alt="" />
                     </Col>
                     <Col lg={5}>
-                        <form className='p-5 bg-secondary shadow rounded ' onSubmit={handleSubmit(onSubmit)}>
+                        <form className='p-5 bg-secondary shadow rounded my-3' onSubmit={handleSubmit(onSubmit)}>
                             <h4 className='text-center fw-bolder text-warning'>Review Form</h4>
 
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">

@@ -57,9 +57,10 @@ const MyOrders = () => {
         <div>
             <Container>
                 <div className=''>
-                    <h2 className='text-center mb-4 display-4 fw-bold text-success'>My Orders {myOrders.length} <img className='ms-3' src={'image2'} alt="" /></h2>
+                    <h2 className='text-center  display-5 fw-bold text-warning'>My Orders {myOrders.length}</h2>
+                    <p className="text-center text-secondary fw-bold">User can see all of the orders that done with this account only</p>
 
-                    <Table responsive variant='success' className='text-center mt-4 rounded w-100 rounded-3'>
+                    <Table responsive variant='secondary' className='text-center mt-4 rounded w-100 rounded-3'>
                         <thead>
                             <tr>
 
