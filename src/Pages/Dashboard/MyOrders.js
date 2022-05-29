@@ -64,22 +64,22 @@ const MyOrders = () => {
                         <thead>
                             <tr>
 
-                                <th className=''>Email</th>
-                                <th className=''>Item</th>
-                                <th className=''>Quantity</th>
-                                <th className=''>Payment</th>
-                                <th className=''>Cancel</th>
+                                <th className='text-warning base-bg'>Email</th>
+                                <th className='text-warning base-bg'>Item</th>
+                                <th className='text-warning base-bg'>Quantity</th>
+                                <th className='text-warning base-bg'>Payment</th>
+                                <th className='text-warning base-bg'>Cancel</th>
 
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className='text-white'>
                             {
                                 myOrders.map(order => <tr key={order?._id}>
-                                    <td><small>{user?.email}</small></td>
-                                    <td><small>{order?.productName}</small></td>
-                                    <td><small>{order?.orderQuantity}</small></td>
-                                    <td><Link to='/dashboard/payment'><Button className='base-bg text-white border-0 btn-sm'>Pay <img src={payment} alt="" /></Button></Link></td>
-                                    <td><img className='cancel-btn' onClick={() => handleCancelBtn(order?._id)} src={cancel} alt="" /></td>
+                                    <td className='bg-secondary'><small>{user?.email}</small></td>
+                                    <td className='bg-secondary'><small>{order?.productName}</small></td>
+                                    <td className='bg-secondary'><small>{order?.orderQuantity}</small></td>
+                                    <td className='bg-secondary'><Link to='/dashboard/payment'><Button className='base-bg text-white border-0 btn-sm'>Pay <img src={payment} alt="" /></Button></Link></td>
+                                    <td className='bg-secondary'><img className='cancel-btn' onClick={() => handleCancelBtn(order?._id)} src={cancel} alt="" /></td>
                                 </tr>)
                             }
                         </tbody>
