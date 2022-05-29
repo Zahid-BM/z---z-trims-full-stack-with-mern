@@ -34,16 +34,18 @@ const AddReview = () => {
     return (
         <>
             <Container className='my-3'>
+                <h1 className='text-center fw-bold text-warning'>Add a Review about us</h1>
+                <p className='text-center fw-bold text-success'>We would love to accept your feedback to serve even better</p>
                 <Row>
-                    <Col lg={6}>
-
+                    <Col lg={7}>
+                        <img className='w-100 h-100 rounded' src="https://img.freepik.com/free-photo/hand-touching-doing-mark-five-yellow-stars-black-background-best-customer-satisfaction-evaluation-good-quality-product-service_616485-33.jpg?w=740&t=st=1653830148~exp=1653830748~hmac=7d75f5a962a39812bc1d37d25492b405ddf75da4310606e5220abf79c03d6f38" alt="" />
                     </Col>
-                    <Col lg={6}>
-                        <form className='p-5 bg-light shadow' onSubmit={handleSubmit(onSubmit)}>
-                            <h4 className='text-center fw-bolder text-success'>Order Form</h4>
+                    <Col lg={5}>
+                        <form className='p-5 bg-secondary shadow rounded ' onSubmit={handleSubmit(onSubmit)}>
+                            <h4 className='text-center fw-bolder text-warning'>Review Form</h4>
 
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                <Form.Label><small className='text-success'>Your Name</small> </Form.Label>
+                                <Form.Label><small className='text-warning'>Your Name</small> </Form.Label>
                                 <Form.Control
                                     className='text-center'
                                     value={user?.displayName}
@@ -53,7 +55,7 @@ const AddReview = () => {
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                <Form.Label><small className='text-success'>Your Email</small> </Form.Label>
+                                <Form.Label><small className='text-warning'>Your Email</small> </Form.Label>
                                 <Form.Control
                                     className='text-center'
                                     value={user?.email}
@@ -62,7 +64,7 @@ const AddReview = () => {
                                 />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                <Form.Label><small className='text-success'>Your Photo</small> </Form.Label>
+                                <Form.Label><small className='text-warning'>Your Photo</small> </Form.Label>
                                 <Form.Control
                                     className='text-center'
                                     type="text"
@@ -75,7 +77,7 @@ const AddReview = () => {
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                <Form.Label><small className='text-success'>Your Ratting</small> </Form.Label>
+                                <Form.Label><small className='text-warning'>Your Ratting</small> </Form.Label>
                                 <Form.Control
                                     className='text-center'
                                     type="text"
@@ -107,7 +109,7 @@ const AddReview = () => {
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                <Form.Label><small className='text-success'>Your Review</small></Form.Label>
+                                <Form.Label><small className='text-warning'>Your Review</small></Form.Label>
                                 <Form.Control as="textarea" rows={3}
                                     required
                                     type="text"
@@ -115,7 +117,7 @@ const AddReview = () => {
                                     {...register("review")}
                                 />
                             </Form.Group>
-                            <input className='text-center d-block mt-4 w-50 mx-auto base-bg border-0 rounded-3 py-2 text-white' value={'Add Review'} type="Submit" />
+                            <input className='text-center d-block mt-4 w-50 mx-auto bg-warning border-0 rounded-3 py-2 text-white' value={'Add Review'} type="Submit" />
                         </form>
                     </Col>
                 </Row>
