@@ -4,6 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import profileImg from '../../images/profile.png';
 
 const MyProfile = () => {
     const [user] = useAuthState(auth);
@@ -29,12 +30,13 @@ const MyProfile = () => {
 
     return (
         <>
-            <Container className='my-3'>
+            <Container fluid >
                 <h1 className='text-center fw-bold text-warning'>Add a Review about us</h1>
                 <p className='text-center fw-bold text-success'>We would love to accept your feedback to serve even better</p>
                 <Row>
-                    <Col lg={6}>
-                        <form className='p-5 base-bg shadow rounded ' onSubmit={handleSubmit(onSubmit)}>
+
+                    <Col lg={7}>
+                        <form className='p-5 bg-light shadow rounded my-2' onSubmit={handleSubmit(onSubmit)}>
                             <h4 className='text-center fw-bolder text-warning'>My Profile Add Form</h4>
 
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -104,9 +106,10 @@ const MyProfile = () => {
 
                         </form>
                     </Col>
-                    <Col lg={6}>
-
+                    <Col lg={5}>
+                        <img className='w-100 h-100' src={profileImg} alt="" />
                     </Col>
+
                 </Row>
             </Container>
 

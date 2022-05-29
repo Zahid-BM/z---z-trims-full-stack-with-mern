@@ -7,16 +7,16 @@ const Dashboard = () => {
     return (
         <Container fluid>
             <Row>
-                <Col lg={2}>
+                <Col className='base-bg min-vh-100' lg={2}>
                     <div className='d-flex flex-md-column align-items-md-center sticky-top'>
                         <ListGroup className='w-100 text-decoration-none'>
-                            <Link to={'/dashboard/myorders'}> <ListGroup.Item variant='success' action>
+                            <Link to={'/dashboard/myorders'}> <ListGroup.Item className='base-bg' variant='success' action>
                                 My Orders
                             </ListGroup.Item></Link>
-                            <Link to={'/dashboard/addreview'}> <ListGroup.Item variant='success' action>
+                            <Link to={'/dashboard/addreview'}> <ListGroup.Item className='base-bg'  variant='success' action>
                                 Add A review
                             </ListGroup.Item></Link>
-                            <Link to={'/dashboard/myprofile'}> <ListGroup.Item variant='success' action>
+                            <Link to={'/dashboard/myprofile'}> <ListGroup.Item className='base-bg'  variant='success' action>
                                 My Profile
                             </ListGroup.Item></Link>
 
