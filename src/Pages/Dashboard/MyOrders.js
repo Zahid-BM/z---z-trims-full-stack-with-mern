@@ -3,7 +3,7 @@ import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { Button, Container, Table } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import payment from '../../images/payment.png';
@@ -77,7 +77,7 @@ const MyOrders = () => {
                                     <td><small>{user?.email}</small></td>
                                     <td><small>{order?.productName}</small></td>
                                     <td><small>{order?.orderQuantity}</small></td>
-                                    <td><Button className='base-bg text-white border-0 btn-sm'>Pay <img src={payment} alt="" /></Button></td>
+                                    <td><Link to='/dashboard/payment'><Button className='base-bg text-white border-0 btn-sm'>Pay <img src={payment} alt="" /></Button></Link></td>
                                     <td><img className='cancel-btn' onClick={() => handleCancelBtn(order?._id)} src={cancel} alt="" /></td>
                                 </tr>)
                             }
