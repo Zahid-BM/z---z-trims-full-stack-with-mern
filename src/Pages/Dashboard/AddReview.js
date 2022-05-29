@@ -67,7 +67,9 @@ const AddReview = () => {
                                     className='text-center'
                                     type="text"
                                     value={user && user?.photoURL}
+                                    placeholder={!user?.photoURL && 'Insert your photo url'}
                                     readOnly={user?.photoURL}
+                                    required={!user?.photoURL}
                                     {...register("img")}
                                 />
                             </Form.Group>
