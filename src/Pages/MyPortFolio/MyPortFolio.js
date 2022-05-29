@@ -22,7 +22,7 @@ const MyPortFolio = () => {
                         <h6><span className='text-success'>Location</span> : Dhaka, Bangladesh.</h6>
                         <h4 className='text-center mt-5 text-success'><img src={skills} alt="" /> List of my Major skills</h4>
 
-                        <ul className="list-group list-group-flush  ">
+                        <ul className="list-group list-group-flush">
                             <li className="list-group-item mb-3 "><b className='text-warning'>Reactjs :</b> I have an advanced level skills on Reactjs with numerous projects. .</li>
                             <li className="list-group-item mb-3 "><b className='text-warning'>Expressjs :</b> I have an intermediate level skills on Expressjs with many projects.</li>
                             <li className="list-group-item mb-3 "><b className='text-warning'>Authentication (Firebase) :</b> I have an intermediate level skill on Firebase Authentication with many projects.</li>

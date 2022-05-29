@@ -13,6 +13,9 @@ import Register from './Pages/Register/Register';
 import RequireAuth from './Pages/Login/RequireAuth';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import NotFound from './Pages/NotFound/NotFound';
+import MyOrders from './Pages/Dashboard/MyOrders';
+import AddReview from './Pages/Dashboard/AddReview';
+import MyProfile from './Pages/Dashboard/MyProfile';
 
 function App() {
   return (
@@ -24,11 +27,19 @@ function App() {
         <Route path='/home' element={<Home />}></Route>
         <Route path='/blogs' element={<Blogs />}></Route>
         <Route path='/portfolio' element={<MyPortFolio />}></Route>
-        <Route path='/dashboard' element={<Dashboard />}></Route>
         <Route path='/purchase/:id' element={
           <RequireAuth>
             <Purchase />
           </RequireAuth>}>
+        </Route>
+        <Route path='/dashboard' element={
+          <RequireAuth>
+            <Dashboard />
+          </RequireAuth>}>
+          <Route index element={<MyPortFolio />} />
+          <Route path='myorders' element={<MyOrders />} />
+          <Route path='addreview' element={<AddReview />} />
+          <Route path='myprofile' element={<MyProfile />} />
         </Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
