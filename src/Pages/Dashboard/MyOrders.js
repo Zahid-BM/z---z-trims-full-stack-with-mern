@@ -59,7 +59,7 @@ const MyOrders = () => {
                 <div className=''>
                     <h2 className='text-center mb-4 display-4 fw-bold text-success'>My Orders {myOrders.length} <img className='ms-3' src={'image2'} alt="" /></h2>
 
-                    <Table responsive variant='success' className='text-center mt-4 rounded w-100'>
+                    <Table responsive variant='success' className='text-center mt-4 rounded w-100 rounded-3'>
                         <thead>
                             <tr>
 
@@ -78,7 +78,7 @@ const MyOrders = () => {
                                     <td><small>{order?.productName}</small></td>
                                     <td><small>{order?.orderQuantity}</small></td>
                                     <td><Button className='base-bg text-white border-0 btn-sm'>Pay <img src={payment} alt="" /></Button></td>
-                                    <td><img onClick={() => handleCancelBtn(order?._id)} src={cancel} alt="" /></td>
+                                    <td><img className='cancel-btn' onClick={() => handleCancelBtn(order?._id)} src={cancel} alt="" /></td>
                                 </tr>)
                             }
                         </tbody>
