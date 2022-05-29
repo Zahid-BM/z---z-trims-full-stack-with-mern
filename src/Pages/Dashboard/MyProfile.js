@@ -30,7 +30,7 @@ const MyProfile = () => {
 
     return (
         <>
-            <Container fluid >
+            <Container className='mt-3' fluid >
                 <h1 className='text-center fw-bold text-warning'>My Profile</h1>
                 <p className='text-center fw-bold text-secondary'>This is your profile. You can add your profile to our database and update too</p>
                 <Row>
