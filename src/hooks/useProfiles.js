@@ -7,7 +7,7 @@ const useProfiles = () => {
     const [allProfiles, setAllProfiles] = useState([]);
     useEffect(() => {
         const getAllProfiles = async () => {
-            const { data } = await axios.get('http://localhost:5000/profiles', {
+            const { data } = await axios.get('https://garments-accessories.herokuapp.com/profiles', {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`
                 }
