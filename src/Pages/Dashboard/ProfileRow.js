@@ -47,7 +47,7 @@ const ProfileRow = ({ profile, index }) => {
             <td className='bg-secondary'><small>{email}</small></td>
             <td className='bg-secondary'><small>{name}</small></td>
             <td className='bg-secondary'>{
-                !role === 'admin' ? <Button onClick={handleMakeAdminBtn} className='base-bg text-white border-0 btn-sm'>Make Admin <img src={'payment'} alt="" /></Button> : <span className='fw-bold text-danger'>You are not an admin</span>
+                role !== 'admin' ? <Button onClick={handleMakeAdminBtn} className='base-bg text-white border-0 btn-sm'>Make Admin <img src={'payment'} alt="" /></Button> : <span className='fw-bold '>Already an admin</span>
             }</td>
             <td className='bg-secondary'><img className='cancel-btn' onClick={() => handleRemoveBtn(profile?._id)} src={cancel} alt="" /></td>
         </tr>
