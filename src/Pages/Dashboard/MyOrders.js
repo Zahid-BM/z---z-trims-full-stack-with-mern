@@ -65,6 +65,7 @@ const MyOrders = () => {
                         <thead>
                             <tr>
 
+                                <th className='text-warning base-bg'>Number</th>
                                 <th className='text-warning base-bg'>Email</th>
                                 <th className='text-warning base-bg'>Item</th>
                                 <th className='text-warning base-bg'>Quantity</th>
@@ -76,7 +77,8 @@ const MyOrders = () => {
                         <tbody className='text-white'>
                             {
                                 myOrders.length ?
-                                    myOrders.map(order => <tr key={order?._id}>
+                                    myOrders.map((order, index) => <tr key={order?._id}>
+                                        <td className='bg-secondary'><small>{index+1}</small></td>
                                         <td className='bg-secondary'><small>{user?.email}</small></td>
                                         <td className='bg-secondary'><small>{order?.productName}</small></td>
                                         <td className='bg-secondary'><small>{order?.orderQuantity}</small></td>
