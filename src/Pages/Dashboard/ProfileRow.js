@@ -9,16 +9,24 @@ const ProfileRow = ({ profile, index }) => {
     const [allProfiles, setAllProfiles] = useProfiles();
 
     const handleMakeAdminBtn = () => {
-        const url = `https://garments-accessories.herokuapp.com/profiles/admin/${email}`;
+        const url = `http://localhost:5000/profiles/admin/${email}`;
         fetch(url, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
             },
         })
-            .then(res => res.json())
+            .then(res => {
+                if (res.status === 403) {
+                    toast.error('Failed to make an admin')
+                }
+                return res.json()
+            })
             .then(data => {
-                toast.success('Admin Role Given Successfully !!!!');
+                if (data.modifiedCount > 0) {
+                    toast.success('Admin Role Given Successfully !!!!');
+                }
+
             })
 
     }
@@ -26,7 +34,7 @@ const ProfileRow = ({ profile, index }) => {
     const handleRemoveBtn = id => {
         const userConfirmation = window.confirm('Once delete then it can not be restored. Are you sure to delete this Item ?')
         if (userConfirmation) {
-            const url = `https://garments-accessories.herokuapp.com/profiles/${id}`;
+            const url = `http://localhost:5000/profiles/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

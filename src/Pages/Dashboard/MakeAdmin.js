@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button, Container, Table } from 'react-bootstrap';
-import { toast } from 'react-toastify';
+import { Container, Table } from 'react-bootstrap';
 import useProfiles from '../../hooks/useProfiles';
 
 import ProfileRow from './ProfileRow';
