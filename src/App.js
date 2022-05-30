@@ -41,7 +41,6 @@ function App() {
           <RequireAuth>
             <Dashboard />
           </RequireAuth>}>
-          <Route index element={<MyPortFolio />} />
           <Route path='myorders' element={<MyOrders />} />
           <Route path='payment' element={<Payment />} />
           <Route path='addreview' element={<AddReview />} />
