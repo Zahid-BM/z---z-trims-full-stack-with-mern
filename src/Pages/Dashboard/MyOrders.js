@@ -58,7 +58,7 @@ const MyOrders = () => {
         <>
             <Container>
                 <div className='mt-3'>
-                    <h2 className='text-center  display-5 fw-bold text-warning'>My Orders : {myOrders.length} items</h2>
+                    <h2 className='text-center  display-5 fw-bold text-warning ms-2'>My Orders : {myOrders.length} items</h2>
                     <p className="text-center text-secondary fw-bold">User can see all of the orders that done with this account only</p>
 
                     <Table responsive variant='secondary' className='text-center mt-4 rounded w-100 rounded-3'>
@@ -76,17 +76,14 @@ const MyOrders = () => {
                         </thead>
                         <tbody className='text-white'>
                             {
-                                myOrders.length ?
-                                    myOrders.map((order, index) => <tr key={order?._id}>
-                                        <td className='bg-secondary'><small>{index+1}</small></td>
-                                        <td className='bg-secondary'><small>{user?.email}</small></td>
-                                        <td className='bg-secondary'><small>{order?.productName}</small></td>
-                                        <td className='bg-secondary'><small>{order?.orderQuantity}</small></td>
-                                        <td className='bg-secondary'><Link to='/dashboard/payment'><Button className='base-bg text-white border-0 btn-sm'>Pay <img src={payment} alt="" /></Button></Link></td>
-                                        <td className='bg-secondary'><img className='cancel-btn' onClick={() => handleCancelBtn(order?._id)} src={cancel} alt="" /></td>
-                                    </tr>)
-                                    :
-                                    <Loading></Loading>
+                                myOrders.map((order, index) => <tr key={order?._id}>
+                                    <td className='bg-secondary'><small>{index + 1}</small></td>
+                                    <td className='bg-secondary'><small>{user?.email}</small></td>
+                                    <td className='bg-secondary'><small>{order?.productName}</small></td>
+                                    <td className='bg-secondary'><small>{order?.orderQuantity}</small></td>
+                                    <td className='bg-secondary'><Link to='/dashboard/payment'><Button className='base-bg text-white border-0 btn-sm'>Pay <img src={payment} alt="" /></Button></Link></td>
+                                    <td className='bg-secondary'><img className='cancel-btn' onClick={() => handleCancelBtn(order?._id)} src={cancel} alt="" /></td>
+                                </tr>)
                             }
                         </tbody>
                     </Table>
