@@ -5,7 +5,7 @@ const useTrims = () => {
     const [trims, setTrims] = useState([]);
     useEffect(() => {
         const getTrims = async () => {
-            const { data } = await axios.get('https://garments-accessories.herokuapp.com/trims');
+            const { data } = await axios.get('http://localhost:5000/trims');
             setTrims(data);
         }
         getTrims();
