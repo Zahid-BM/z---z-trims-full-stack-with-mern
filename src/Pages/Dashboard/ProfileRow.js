@@ -43,6 +43,7 @@ const ProfileRow = ({ profile, index }) => {
                     if (result.deletedCount === 1) {
                         const remaining = allProfiles.filter(profile => profile?._id !== id);
                         setAllProfiles(remaining)
+                        window.location.reload(allProfiles)
                         toast.success('User Profile removal success!!!')
                     }
                 })
