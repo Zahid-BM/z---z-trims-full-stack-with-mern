@@ -101,7 +101,7 @@ const MyProfile = () => {
                                     {...register("education")}
                                 />
                             </Form.Group>
-                            <input className='text-center d-block mt-4 w-50 mx-auto bg-warning border-0 rounded-3 py-2 text-white' value={'Add Profile'} type="Submit" />
+                            <input className='text-center d-block mt-4 w-50 mx-auto bg-warning border-0 rounded-3 py-2 text-white' value={'Add / Update Profile'} type="Submit" />
 
 
                         </form>

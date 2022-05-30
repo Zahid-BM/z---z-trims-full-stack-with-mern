@@ -18,7 +18,7 @@ const ProfileRow = ({ profile, index }) => {
         })
             .then(res => res.json())
             .then(data => {
-                toast.success('Admin Role Given !!!!');
+                toast.success('Admin Role Given Successfully !!!!');
             })
 
     }
