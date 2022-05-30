@@ -13,7 +13,7 @@ const Dashboard = () => {
                             <Navbar.Toggle className='text-warning base-bg' aria-controls="responsive-navbar-nav" />
                             <Navbar.Collapse id="responsive-navbar-nav">
                                 <ListGroup className='text-decoration-none vh-lg-100 mx-auto'>
-                                    <Link to={'/dashboard/myorders'}> <ListGroup.Item className='base-bg my-1 border-0 text-decoration-none shadow px-5 rounded text-center' variant='success' action>
+                                    <Link to={'/dashboard/myorders'}> <ListGroup.Item className='base-bg mt-2 mb-1 border-0 text-decoration-none shadow px-5 rounded text-center' variant='success' action>
                                         My Orders
                                     </ListGroup.Item></Link>
                                     <Link to={'/dashboard/addreview'}> <ListGroup.Item className='base-bg my-1 border-0 text-decoration-none shadow px-5 rounded text-center' variant='success' action>
