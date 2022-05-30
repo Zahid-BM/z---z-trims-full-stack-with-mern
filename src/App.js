@@ -18,6 +18,9 @@ import AddReview from './Pages/Dashboard/AddReview';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import Payment from './Pages/Dashboard/Payment';
 import MakeAdmin from './Pages/Dashboard/MakeAdmin';
+import ManageAllOrders from './Pages/Dashboard/ManageAllOrders/ManageAllOrders';
+import AddAProduct from './Pages/Dashboard/AddAProduct/AddAProduct';
+import ManageProducts from './Pages/Dashboard/ManageProducts/ManageProducts';
 
 function App() {
   return (
@@ -44,6 +47,9 @@ function App() {
           <Route path='addreview' element={<AddReview />} />
           <Route path='myprofile' element={<MyProfile />} />
           <Route path='makeadmin' element={<MakeAdmin />} />
+          <Route path='manageorders' element={<ManageAllOrders />} />
+          <Route path='addproduct' element={<AddAProduct />} />
+          <Route path='manageproducts' element={<ManageProducts />} />
         </Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>

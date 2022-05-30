@@ -18,17 +18,26 @@ const Dashboard = () => {
                             <Navbar.Toggle className='text-warning base-bg' aria-controls="responsive-navbar-nav" />
                             <Navbar.Collapse id="responsive-navbar-nav">
                                 <ListGroup className='text-decoration-none vh-lg-100 mx-auto'>
-                                    <Link to={'/dashboard/myorders'}> <ListGroup.Item className='base-bg mt-2 mb-1 border-0 text-decoration-none shadow px-5 rounded text-center' variant='success' action>
+                                    {!admin && <Link to={'/dashboard/myorders'}> <ListGroup.Item className='base-bg mt-2 mb-1 border-0 text-decoration-none shadow px-5 rounded text-center' variant='success' action>
                                         My Orders
-                                    </ListGroup.Item></Link>
-                                    <Link to={'/dashboard/addreview'}> <ListGroup.Item className='base-bg my-1 border-0 text-decoration-none shadow px-5 rounded text-center' variant='success' action>
+                                    </ListGroup.Item></Link>}
+                                    {!admin && <Link to={'/dashboard/addreview'}> <ListGroup.Item className='base-bg my-1 border-0 text-decoration-none shadow px-5 rounded text-center' variant='success' action>
                                         Add A review
-                                    </ListGroup.Item></Link>
+                                    </ListGroup.Item></Link>}
                                     <Link to={'/dashboard/myprofile'}> <ListGroup.Item className='base-bg my-1 border-0 text-decoration-none shadow px-5 rounded text-center' variant='success' action>
                                         My Profile
                                     </ListGroup.Item></Link>
                                     {admin && <Link to={'/dashboard/makeadmin'}> <ListGroup.Item className='base-bg my-1 border-0 text-decoration-none shadow px-5 rounded text-center' variant='success' action>
                                         Make Admin
+                                    </ListGroup.Item></Link>}
+                                    {admin && <Link to={'/dashboard/manageorders'}> <ListGroup.Item className='base-bg my-1 border-0 text-decoration-none shadow px-5 rounded text-center' variant='success' action>
+                                        Manage All Orders
+                                    </ListGroup.Item></Link>}
+                                    {admin && <Link to={'/dashboard/addproduct'}> <ListGroup.Item className='base-bg my-1 border-0 text-decoration-none shadow px-5 rounded text-center' variant='success' action>
+                                        Add A Product
+                                    </ListGroup.Item></Link>}
+                                    {admin && <Link to={'/dashboard/manageproducts'}> <ListGroup.Item className='base-bg my-1 border-0 text-decoration-none shadow px-5 rounded text-center' variant='success' action>
+                                        Manage Products
                                     </ListGroup.Item></Link>}
                                 </ListGroup>
                             </Navbar.Collapse>
