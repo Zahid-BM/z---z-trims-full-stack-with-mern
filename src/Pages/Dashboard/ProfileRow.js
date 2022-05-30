@@ -5,7 +5,7 @@ import useProfiles from '../../hooks/useProfiles';
 import cancel from '../../images/cancel.png';
 
 const ProfileRow = ({ profile, index }) => {
-    const { email, name } = profile;
+    const { email, name, role } = profile;
     const [allProfiles, setAllProfiles] = useProfiles();
 
     const handleMakeAdminBtn = () => {
@@ -22,10 +22,6 @@ const ProfileRow = ({ profile, index }) => {
             })
 
     }
-
-
-
-
 
     const handleRemoveBtn = id => {
         const userConfirmation = window.confirm('Once delete then it can not be restored. Are you sure to delete this Item ?')
@@ -50,7 +46,9 @@ const ProfileRow = ({ profile, index }) => {
             <td className='bg-secondary'><small>{index + 1}</small></td>
             <td className='bg-secondary'><small>{email}</small></td>
             <td className='bg-secondary'><small>{name}</small></td>
-            <td className='bg-secondary'><Button onClick={handleMakeAdminBtn} className='base-bg text-white border-0 btn-sm'>Make Admin <img src={'payment'} alt="" /></Button></td>
+            <td className='bg-secondary'>{
+                !role === 'admin' ? <Button onClick={handleMakeAdminBtn} className='base-bg text-white border-0 btn-sm'>Make Admin <img src={'payment'} alt="" /></Button> : <span className='fw-bold text-danger'>You are not an admin</span>
+            }</td>
             <td className='bg-secondary'><img className='cancel-btn' onClick={() => handleRemoveBtn(profile?._id)} src={cancel} alt="" /></td>
         </tr>
 
