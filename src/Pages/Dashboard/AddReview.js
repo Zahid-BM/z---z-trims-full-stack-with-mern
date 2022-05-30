@@ -33,7 +33,7 @@ const AddReview = () => {
     };
     return (
         <>
-            <Container className='my-3'>
+            <Container className='my-5'>
                 <h1 className='text-center fw-bold text-warning'>Add a Review about us</h1>
                 <p className='text-center fw-bold text-secondary'>We would love to accept your feedback to serve even better</p>
                 <Row>

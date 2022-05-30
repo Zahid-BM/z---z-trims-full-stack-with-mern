@@ -55,9 +55,9 @@ const MyOrders = () => {
         }
     };
     return (
-        <div>
+        <>
             <Container>
-                <div className=''>
+                <div className='mt-3'>
                     <h2 className='text-center  display-5 fw-bold text-warning'>My Orders : {myOrders.length} items</h2>
                     <p className="text-center text-secondary fw-bold">User can see all of the orders that done with this account only</p>
 
@@ -91,7 +91,7 @@ const MyOrders = () => {
                 </div>
             </Container>
 
-        </div>
+        </>
     );
 };
 

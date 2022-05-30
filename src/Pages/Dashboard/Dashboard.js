@@ -6,13 +6,13 @@ import PageTitle from '../Shared/PageTitle/PageTitle';
 const Dashboard = () => {
     return (
         <>
-            <Container fluid>
+            {<Container fluid>
                 <Row>
                     <Col className='base-bg' lg={2}>
-                        <Navbar collapseOnSelect expand="lg" variant='dark'>
-                            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                        <Navbar style={{ position: 'fixed' }} collapseOnSelect expand="lg" variant='dark' className='mt-lg-5 px-2'>
+                            <Navbar.Toggle className='text-warning base-bg' aria-controls="responsive-navbar-nav" />
                             <Navbar.Collapse id="responsive-navbar-nav">
-                                <ListGroup className='text-decoration-none vh-lg-100 my-3 mx-auto'>
+                                <ListGroup className='text-decoration-none vh-lg-100 mx-auto'>
                                     <Link to={'/dashboard/myorders'}> <ListGroup.Item className='base-bg my-1 border-0 text-decoration-none shadow px-5 rounded text-center' variant='success' action>
                                         My Orders
                                     </ListGroup.Item></Link>
@@ -30,9 +30,8 @@ const Dashboard = () => {
                         <Outlet></Outlet>
                     </Col>
                 </Row>
-
-                <PageTitle title={'Dashboard'} />
-            </Container>
+            </Container>}
+            <PageTitle title={'Dashboard'} />
         </>
     );
 };
