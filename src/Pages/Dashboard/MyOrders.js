@@ -8,7 +8,6 @@ import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import payment from '../../images/payment.png';
 import cancel from '../../images/cancel.png';
-import Loading from '../Shared/Loading/Loading';
 
 const MyOrders = () => {
     const [user] = useAuthState(auth);

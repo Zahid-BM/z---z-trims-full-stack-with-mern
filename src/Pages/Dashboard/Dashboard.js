@@ -8,7 +8,7 @@ const Dashboard = () => {
         <>
             {<Container fluid>
                 <Row>
-                    <Col className='base-bg' lg={2}>
+                    <Col className='' lg={2}>
                         <Navbar style={{ position: 'fixed' }} collapseOnSelect expand="lg" variant='dark' className='mt-lg-5 px-2'>
                             <Navbar.Toggle className='text-warning base-bg' aria-controls="responsive-navbar-nav" />
                             <Navbar.Collapse id="responsive-navbar-nav">
@@ -21,6 +21,9 @@ const Dashboard = () => {
                                     </ListGroup.Item></Link>
                                     <Link to={'/dashboard/myprofile'}> <ListGroup.Item className='base-bg my-1 border-0 text-decoration-none shadow px-5 rounded text-center' variant='success' action>
                                         My Profile
+                                    </ListGroup.Item></Link>
+                                    <Link to={'/dashboard/makeadmin'}> <ListGroup.Item className='base-bg my-1 border-0 text-decoration-none shadow px-5 rounded text-center' variant='success' action>
+                                        Make Admin
                                     </ListGroup.Item></Link>
                                 </ListGroup>
                             </Navbar.Collapse>
