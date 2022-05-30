@@ -2,8 +2,13 @@ import React from 'react';
 import { Col, Container, ListGroup, Navbar, Row } from 'react-bootstrap';
 import { Link, Outlet } from 'react-router-dom';
 import PageTitle from '../Shared/PageTitle/PageTitle';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import useAdmin from '../../hooks/useAdmin';
 
 const Dashboard = () => {
+    const [user] = useAuthState(auth)
+    const [admin] = useAdmin(user);
     return (
         <>
             {<Container fluid>
@@ -22,9 +27,9 @@ const Dashboard = () => {
                                     <Link to={'/dashboard/myprofile'}> <ListGroup.Item className='base-bg my-1 border-0 text-decoration-none shadow px-5 rounded text-center' variant='success' action>
                                         My Profile
                                     </ListGroup.Item></Link>
-                                    <Link to={'/dashboard/makeadmin'}> <ListGroup.Item className='base-bg my-1 border-0 text-decoration-none shadow px-5 rounded text-center' variant='success' action>
+                                    {admin && <Link to={'/dashboard/makeadmin'}> <ListGroup.Item className='base-bg my-1 border-0 text-decoration-none shadow px-5 rounded text-center' variant='success' action>
                                         Make Admin
-                                    </ListGroup.Item></Link>
+                                    </ListGroup.Item></Link>}
                                 </ListGroup>
                             </Navbar.Collapse>
                         </Navbar>
