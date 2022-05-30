@@ -14,7 +14,7 @@ const MyProfile = () => {
         console.log(data);
         const profile = data;
         console.log(data);
-        const url = `http://localhost:5000/profile/${user.email}`;
+        const url = `https://garments-accessories.herokuapp.com/profile/${user.email}`;
         fetch(url, {
             method: 'PUT',
             headers: { 'Content-type': 'application/json' },

@@ -9,7 +9,7 @@ const ManageAllOrders = () => {
     const handleCancelBtn = id => {
         const userConfirmation = window.confirm('Once delete then it can not be restored. Are you sure to delete this Item ?')
         if (userConfirmation) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://garments-accessories.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

@@ -5,7 +5,7 @@ const usePurchaseItem = (id) => {
     const [purchaseItem, setPurchaseItem] = useState({});
     useEffect(() => {
         const getItemById = async () => {
-            const url = `http://localhost:5000/trims/${id}`
+            const url = `https://garments-accessories.herokuapp.com/trims/${id}`
             const { data } = await axios.get(url);
             setPurchaseItem(data);
         }

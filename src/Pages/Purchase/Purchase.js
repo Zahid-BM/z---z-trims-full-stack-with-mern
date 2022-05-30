@@ -19,7 +19,7 @@ const Purchase = () => {
         const order = data;
         console.log(order)
 
-        const url = 'http://localhost:5000/orders';
+        const url = 'https://garments-accessories.herokuapp.com/orders';
 
         axios.post(url, order)
             .then(res => {

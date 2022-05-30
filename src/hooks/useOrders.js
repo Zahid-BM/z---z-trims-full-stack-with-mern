@@ -10,7 +10,7 @@ const useOrders = () => {
     useEffect(() => {
         const getOrders = async () => {
 
-            const url = 'http://localhost:5000/allOrders';
+            const url = 'https://garments-accessories.herokuapp.com/allOrders';
             try {
                 const { data } = await axios.get(url, {
                     headers: {

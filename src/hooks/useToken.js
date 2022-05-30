@@ -9,7 +9,7 @@ const useToken = user => {
         const getToken = async () => {
             const email = user?.user?.email;
             if (email) {
-                const { data /* destructured */ } = await axios.post('http://localhost:5000/login', { email });
+                const { data /* destructured */ } = await axios.post('https://garments-accessories.herokuapp.com/login', { email });
 
                 setToken(data.accessToken);
                 localStorage.setItem('accessToken', data.accessToken);
