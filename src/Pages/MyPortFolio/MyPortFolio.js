@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import PageTitle from '../Shared/PageTitle/PageTitle';
-import image from '../../images/Passport size below 200kb.jpeg';
+import image from '../../images/profile-pic.png';
 import skills from '../../images/skills.png';
 import target from '../../images/target.png';
 import website from '../../images/website-development.png';
