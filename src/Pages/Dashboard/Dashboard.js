@@ -13,7 +13,7 @@ const Dashboard = () => {
         <>
             {<Container fluid>
                 <Row>
-                    <Col className='' lg={2}>
+                    <Col lg={2}>
                         <Navbar style={{ position: 'fixed' }} collapseOnSelect expand="lg" variant='dark' className='mt-lg-5 px-2'>
                             <Navbar.Toggle className='text-warning base-bg' aria-controls="responsive-navbar-nav" />
                             <Navbar.Collapse id="responsive-navbar-nav">
@@ -24,7 +24,7 @@ const Dashboard = () => {
                                     {!admin && <Link to={'/dashboard/addreview'}> <ListGroup.Item className='base-bg my-1 border-0 text-decoration-none shadow px-5 rounded text-center' variant='success' action>
                                         Add A review
                                     </ListGroup.Item></Link>}
-                                    <Link to={'/dashboard/myprofile'}> <ListGroup.Item className='base-bg my-1 border-0 text-decoration-none shadow px-5 rounded text-center' variant='success' action>
+                                    <Link to={'/dashboard/myprofile'}> <ListGroup.Item className='base-bg mb-1 mt-2 border-0 text-decoration-none shadow px-5 rounded text-center' variant='success' action>
                                         My Profile
                                     </ListGroup.Item></Link>
                                     {admin && <Link to={'/dashboard/makeadmin'}> <ListGroup.Item className='base-bg my-1 border-0 text-decoration-none shadow px-5 rounded text-center' variant='success' action>
@@ -48,7 +48,7 @@ const Dashboard = () => {
                     </Col>
                 </Row>
             </Container>}
-            <PageTitle title={'Dashboard'} />
+            <PageTitle title={'Dashboard'} pageColor='bg-dashboard' />
         </>
     );
 };

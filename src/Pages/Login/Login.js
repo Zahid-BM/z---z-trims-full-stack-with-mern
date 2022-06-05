@@ -33,7 +33,7 @@ const Login = () => {
     useEffect(() => {
         if (token) {
             navigate(from, { replace: true });
-            toast('login success. You can now see the private/protected routes.');
+            toast.success('login success. You can now see the private/protected routes.');
         };
     }, [user, token, location, navigate, from]);
 
@@ -57,7 +57,7 @@ const Login = () => {
             }
             else {
                 await sendPasswordResetEmail(email);
-                toast('Sent email for password reset');
+                toast.success('Sent email for password reset');
             }
         }
     };

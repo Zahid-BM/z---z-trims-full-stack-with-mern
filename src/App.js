@@ -21,6 +21,9 @@ import MakeAdmin from './Pages/Dashboard/MakeAdmin';
 import ManageAllOrders from './Pages/Dashboard/ManageAllOrders/ManageAllOrders';
 import AddAProduct from './Pages/Dashboard/AddAProduct/AddAProduct';
 import ManageProducts from './Pages/Dashboard/ManageProducts/ManageProducts';
+import Welcome from './Pages/Dashboard/Welcome';
+import './App.css';
+
 
 function App() {
   return (
@@ -41,6 +44,7 @@ function App() {
           <RequireAuth>
             <Dashboard />
           </RequireAuth>}>
+          <Route index element={<Welcome />} />
           <Route path='myorders' element={<MyOrders />} />
           <Route path='payment' element={<Payment />} />
           <Route path='addreview' element={<AddReview />} />

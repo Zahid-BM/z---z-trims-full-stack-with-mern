@@ -37,7 +37,7 @@ const MyOrders = () => {
 
 
     const handleCancelBtn = id => {
-        const userConfirmation = window.confirm('Once delete then it can not be restored. Are you sure to delete this Item ?')
+        const userConfirmation = window.confirm('Once cancelled then it can not be retrieve. Are you sure to cancel this Item ?')
         if (userConfirmation) {
             const url = `https://garments-accessories.herokuapp.com/orders/${id}`;
             fetch(url, {
@@ -48,7 +48,7 @@ const MyOrders = () => {
                     if (result.deletedCount === 1) {
                         const remaining = myOrders.filter(order => order?._id !== id);
                         setMyOrders(remaining)
-                        toast('Order Cancelled')
+                        toast.success('Order Cancelled')
                     }
                 })
         }
@@ -81,7 +81,7 @@ const MyOrders = () => {
                                     <td className='bg-secondary'><small>{order?.productName}</small></td>
                                     <td className='bg-secondary'><small>{order?.orderQuantity}</small></td>
                                     <td className='bg-secondary'><Link to='/dashboard/payment'><Button className='base-bg text-white border-0 btn-sm'>Pay <img src={payment} alt="" /></Button></Link></td>
-                                    <td className='bg-secondary'><img className='cancel-btn' onClick={() => handleCancelBtn(order?._id)} src={cancel} alt="" /></td>
+                                    <td className='bg-secondary'><img className='cursor-selector' onClick={() => handleCancelBtn(order?._id)} src={cancel} alt="" /></td>
                                 </tr>)
                             }
                         </tbody>

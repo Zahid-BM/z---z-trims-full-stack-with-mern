@@ -27,7 +27,7 @@ const Register = () => {
     useEffect(() => {
         if (token) {
             navigate('/');
-            toast('Account creation done !!!!');
+            toast.success('Account creation done !!!!');
         };
     }, [user, token, navigate]);
 

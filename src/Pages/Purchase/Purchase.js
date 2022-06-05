@@ -26,7 +26,7 @@ const Purchase = () => {
                 const { data } = res;
                 console.log(data)
                 if (data.insertedId) {
-                    toast('Success !!! Your Order will be reviewed by an admin. For update visit My Orders page');
+                    toast.success('Success !!! Your Order will be reviewed by an admin. For update visit My Orders page');
                     reset();
                 }
             })

@@ -13,14 +13,19 @@ const MyPortFolio = () => {
             <Container className='my-5'>
                 <Row>
                     <Col className='my-auto p-4' lg={6}>
-                        <h1 className='fw-bolder display-3 '><span className='text-success'>Hello ! This is BM</span> <span className='text-warning'>Zahidul Islam</span></h1>
+                        <h1 className='fw-bolder display-3 '><span className='text-secondary'>Hello ! This is BM</span> <span className='text-warning'>Zahidul Islam</span></h1>
                         <br />
-                        <h6><span className='text-success'>Email Address</span> : bmzahidulislam@outlook.com</h6>
-                        <h6><span className='text-success'>Profession</span> : Programmer (Course on going...)</h6>
-                        <h6><span className='text-success'>Job Experience</span>: H&M Merchandiser at Ananta Apparels Limited, Supply Chain Management Officer at Ananta Apparels Limited, Trainee Supply Chain Management Officer at Ananta Apparels Limited.</h6>
-                        <h6><span className='text-success'>Academic Background</span> : Bachelor and Masters in English. National University, Bangladesh.</h6>
-                        <h6><span className='text-success'>Location</span> : Dhaka, Bangladesh.</h6>
-                        <h4 className='text-center mt-5 text-success'><img src={skills} alt="" /> List of my Major skills</h4>
+                        <h6><span className='text-warning'>Email Address</span> : bmzahidulislam@outlook.com</h6>
+                        <h6><span className='text-warning'>Profession</span> : Programmer (Course on going...)</h6>
+                        <h6><span className='text-warning'>Job Experience</span>: H&M Merchandiser at Ananta Apparels Limited, Supply Chain Management Officer at Ananta Apparels Limited, Trainee Supply Chain Management Officer at Ananta Apparels Limited.</h6>
+                        <h6><span className='text-warning'>Academic Background</span> : Bachelor and Masters in English. National University, Bangladesh.</h6>
+                        <h6><span className='text-warning'>Location</span> : Dhaka, Bangladesh.</h6>
+
+                        <br />
+                        <br />
+                        <h2 className='text-warning'>Career Goal <img src={target} alt="" /></h2>
+                        <p className='text-dark'>I am a Full-stack Junior Web Developer. Looking for a Job Position where I can learn and enrich my knowledge, skills and bring the fullest success & prosperity  for the organization and mine as well.</p>
+                        <h4 className='text-center mt-5 text-warning'><img src={skills} alt="" /> List of my Major skills</h4>
 
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item mb-3 "><b className='text-warning'>Reactjs :</b> I have an advanced level skills on Reactjs with numerous projects. .</li>
@@ -34,7 +39,7 @@ const MyPortFolio = () => {
                         </ul>
 
                         <div className='my-4'>
-                            <h4 className='text-success'>Three Website links  created by me <img src={website} alt="" /></h4>
+                            <h4 className='text-warning'>Three Website links  created by me <img src={website} alt="" /></h4>
                             <ul className="list-group list-group-flush  ">
                                 <li className="list-group-item mb-3 "><a href="https://fruits-warehouse-f1061.web.app/" target="_blank" rel="noreferrer">
                                     <Button className='text-decoration-none text-warning fw-bold' variant='link'>Website : 1</Button>
@@ -47,10 +52,7 @@ const MyPortFolio = () => {
                                 </a></li>
                             </ul>
                         </div>
-                        <br />
-                        <br />
-                        <h2 className='text-success'>Career Goal <img src={target} alt="" /></h2>
-                        <p className='text-secondary'>Currently I am having my programming course from Programming Hero on Full Stack Web Development. After having completed this course I will try for job and later on after having some experiences and enriching my programming skills I have a plan to start a business of my own.</p>
+
                     </Col>
                     <Col lg={6}>
                         <img className='w-100 rounded' src={image} alt="" />

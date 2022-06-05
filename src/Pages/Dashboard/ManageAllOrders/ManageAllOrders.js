@@ -39,6 +39,7 @@ const ManageAllOrders = () => {
                                 <th className='text-warning base-bg'>Item</th>
                                 <th className='text-warning base-bg'>Quantity</th>
                                 <th className='text-warning base-bg'>Payment</th>
+                                <th className='text-warning base-bg'>Shipping</th>
                                 <th className='text-warning base-bg'>Cancel</th>
 
                             </tr>
@@ -51,7 +52,8 @@ const ManageAllOrders = () => {
                                     <td className='bg-secondary'><small>{order?.productName}</small></td>
                                     <td className='bg-secondary'><small>{order?.orderQuantity}</small></td>
                                     <td className='bg-secondary'><Button className='base-bg text-white border-0 btn-sm'>Pending</Button></td>
-                                    <td className='bg-secondary'><img className='cancel-btn' onClick={() => handleCancelBtn(order?._id)} src={cancel} alt="" /></td>
+                                    <td className='bg-secondary'><Button className='base-bg text-white border-0 btn-sm'>Pending</Button></td>
+                                    <td className='bg-secondary'><img className='cursor-selector' onClick={() => handleCancelBtn(order?._id)} src={cancel} alt="" /></td>
                                 </tr>)
                             }
                         </tbody>

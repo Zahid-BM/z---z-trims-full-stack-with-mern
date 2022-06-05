@@ -7,11 +7,11 @@ import question from '../../images/question.png';
 const Blogs = () => {
     return (
         <>
-            <PageTitle title={'Blogs'} pageColor={'blogs-bg'}></PageTitle>
-            <Container className='bg-light rounded shadow-lg px-3 py-4 my-3' >
-                <h1 className='text-center fw-bold text-success display-4 mt-5 mb-3'>The questions to be answered <img src={question} alt="" /></h1>
+            <PageTitle title={'Blogs'} pageColor={'bg-dashboard'}></PageTitle>
+            <Container fluid className='bg-light rounded px-3 py-4 bg-blogs' >
+                <h1 className='text-center fw-bold text-warning display-4 mb-3'>The questions to be answered <img src={question} alt="" /></h1>
                 <Row>
-                    <Col className='my-auto py-5 my-auto ' lg={7}>
+                    <Col className='' lg={7}>
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item className='base-bg text-white' eventKey="0">
                                 <Accordion.Header >How will you improve the performance of a React Application ??</Accordion.Header>
@@ -47,7 +47,7 @@ const Blogs = () => {
                             </Accordion.Item>
                         </Accordion>
                     </Col>
-                    <Col className='py-5' lg={5}>
+                    <Col lg={5}>
                         <img className='w-100 rounded-3' src="https://cdn.pixabay.com/photo/2016/10/08/18/35/help-1724292_960_720.png" alt="" />
                     </Col>
                 </Row>

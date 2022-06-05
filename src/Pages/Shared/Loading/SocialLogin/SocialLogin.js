@@ -21,7 +21,7 @@ const SocialLogin = () => {
     useEffect(() => {
         if (token) {
             navigate(from, { replace: true });
-            toast('Account access given')
+            toast.success('Account access given')
         };
     }, [user, user1, token, location, navigate, from]);
     const handleGoogleSignIn = () => {

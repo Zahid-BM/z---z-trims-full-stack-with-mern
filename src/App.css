@@ -2,9 +2,17 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg-dashboard{
+     background-image: linear-gradient(#2F8F9D, #14C38E); 
+}
+.home-bg{
+     background-image: linear-gradient(#F7F7EE, #ECF4F3); 
+}
+.bg-blogs{
+     background-image: linear-gradient(#3C9D9B, #14C38E); 
+}
+.portfolio-bg{
+     background-image: linear-gradient(#3C9D9B, #14C38E); 
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,16 +21,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
 .App-link {
   color: #61dafb;

@@ -15,7 +15,7 @@ const Header = () => {
     const handleLogout = () => {
         signOut(auth);
         navigate('/home')
-        toast('You Logged out. Please login to visit protected page.');
+        toast.warning('You Logged out. Please login to visit protected page.');
     };
 
 

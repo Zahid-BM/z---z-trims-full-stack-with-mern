@@ -23,7 +23,7 @@ const AddReview = () => {
                 const { data } = res;
                 console.log(data)
                 if (data.insertedId) {
-                    toast('Success !!! Your review is added. Your review is now available on the homepage reviews section.');
+                    toast.success('Success !!! Your review is added. Your review is now available on the homepage reviews section.');
                     reset();
                 }
             })
