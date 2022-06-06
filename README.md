@@ -20,4 +20,4 @@ This is a fullstack React SPA website with Fully Performing CRUD operations. Thi
 * Mongodb database
 * Site styling based on React Bootstrap with slightly use of custom css
 * For site page titling react-helmet-async used
-* React router, react hook form, react firebase hooks, react-toastify and axios used
+* React router, react hook form, react firebase hooks, react-toastify and axios used.
