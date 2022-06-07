@@ -25,7 +25,7 @@ const Header = () => {
                 <Container fluid>
                     <Navbar.Brand className='fw-bold fs-3 fst-italic mb-0' style={{ fontFamily: 'Lobstar' }} as={Link} to="/">
                         <div className='h-50'>
-                            <img className='me-2 mb-0' src={logo} alt="" />
+                            <img className='me-2' src={logo} alt="" />
 
                             <span className='text-success'>Z</span><span className='text-warning'>&</span><span className='text-success'>Z</span> <br />
                             <span className='fs-6'><span className='text-warning'>Trims</span> <span className='text-success'>Manufacturer</span></span>
