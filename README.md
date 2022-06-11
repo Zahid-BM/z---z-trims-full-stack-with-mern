@@ -6,20 +6,16 @@ Backend/server side code GitHub repo [Visit](https://github.com/programming-hero
 
 # About this site
 
-This is a fullstack website with Fully Performing CRUD operations with MERN. This site is made by myself.
+A Full-stack mobile responsive MERN project for trims manufacturer site with payment and admin dashboard
 
 ## Key points of the website
 
-* Fully performing CRUD operation
-* Firebase authentication
-* Admin Role implementation
-* Dashboard Operation and UI
-* Payment Method implemented
-* Social login alongside email and password
-* Protected routes
-* Secured authorization using JWT (Json Web Token)
-* Self created CRUD API
-* Mongodb database
-* Site styling based on React Bootstrap with slightly use of custom css
-* For site page titling react-helmet-async used
-* React router, react hook form, react firebase hooks, react-toastify and axios used.
+* User can create an account with email verification, login  and can do password reset if password is forgotten.
+* A user can visit but can not order until having an account coz Order page is a protected route. Social login is added to make that easier. But without email verification no user can.order any item.
+* General user will have a fully functional CRUD operation experience. They can add their profile to the database and can add a review that will be displayed in the review section.
+* Payment Gateway available. User can pay via credit card and admin can verify for further action.
+* Admin dashboard and admin role is available. Admin can see all the orders, modify orders, can add a new item and ship the products after payment verification. An admin can also make a user as an admin and remove as well.
+  
+## Technologies used
+
+* Reactjs, Express, Node, MongoDB, Bootstrap, React Query, Rest API, Firebase, Stripe Payment Gateway, Heroku, React Router, axios, Json Web Token etc.
