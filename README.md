@@ -2,7 +2,7 @@
 
 Live website hosted in firebase [Visit Live website](https://garments-accessories.web.app/).
 Backend/server side code is hosted in Heroku [Visit](https://garments-accessories.herokuapp.com/).
-Backend/server side code GitHub repo [Visit](https://github.com/programming-hero-web-course1/manufacturer-website-server-side-Zahid-BM).
+Backend/server side code GitHub repo [Visit](https://github.com/Zahid-BM/z-and-z-trims-full-stack-with-mern).
 
 # About this site
 
