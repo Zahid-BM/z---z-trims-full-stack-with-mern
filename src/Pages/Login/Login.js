@@ -61,6 +61,9 @@ const Login = () => {
             }
         }
     };
+    const handleAdminLogin = () => {
+        toast(`Email : bmzahid.programmer@gmail.com Password : 123456`)
+    };
 
     return (
         <>
@@ -89,6 +92,8 @@ const Login = () => {
                             <Button className='d-block w-100 common-btn border-0 hover1' type="submit">
                                 Login
                             </Button>
+
+                            <Button onClick={handleAdminLogin} variant='outline-success' className='d-block mt-3 mx-auto'>Login as Admin ?</Button>
                         </Form>
                         <p className='my-4'><small>New to Z&Z Trims ?</small> <Link to='/register' className='text-decoration-none'>Register</Link></p>
                         <SocialLogin></SocialLogin>
