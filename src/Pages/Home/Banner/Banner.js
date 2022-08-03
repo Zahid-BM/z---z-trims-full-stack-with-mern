@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { Button, Card, Carousel, ListGroup } from 'react-bootstrap';
 import banner1 from '../../../images/Banner/banner-1.jpg';
@@ -27,18 +26,20 @@ const Banner = () => {
                                     We are nominated for Labels and Hangtag for 17 Brands. Per Day production capacity around 100000 pcs.
                                 </Card.Text>
                                 <div className='d-none d-sm-block'>
-                                    <Button onClick={handleShow} className='rounded-pill px-5 py-2 opacity-75 m-3' variant='warning'>Our Nomination</Button>
+                                    {/* modal declaration starts */}
                                     <Modal show={show} onHide={handleClose}>
                                         <Modal.Header className='bg-warning' closeButton>
                                             <Modal.Title>Buyer's Nominations</Modal.Title>
                                         </Modal.Header>
-                                        <Modal.Body>
+                                        <Modal.Body >
                                             <ListGroup>
-                                                <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                                                <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                                                <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-                                                <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-                                                <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+                                                <ListGroup.Item className='base-bg text-white text-center'>H&M</ListGroup.Item>
+                                                <ListGroup.Item className='base-bg text-white text-center'>GAP</ListGroup.Item>
+                                                <ListGroup.Item className='base-bg text-white text-center'>Levi's</ListGroup.Item>
+                                                <ListGroup.Item className='base-bg text-white text-center'>M&S</ListGroup.Item>
+                                                <ListGroup.Item className='base-bg text-white text-center'>Puma</ListGroup.Item>
+                                                <ListGroup.Item className='base-bg text-white text-center'>Adidas</ListGroup.Item>
+                                                <ListGroup.Item className='base-bg text-white text-center'>NIKE</ListGroup.Item>
                                             </ListGroup>
                                         </Modal.Body>
                                         <Modal.Footer>
@@ -47,7 +48,13 @@ const Banner = () => {
                                             </Button>
                                         </Modal.Footer>
                                     </Modal>
+                                    {/* modal declaration ends */}
+
+                                    <Button onClick={handleShow} className='rounded-pill px-5 py-2 opacity-75 m-3' variant='warning'>Our Nomination</Button>
+
+
                                     <Button className='rounded-pill px-4 py-2 opacity-75 m-3' variant='success'>Production Capacity</Button>
+
                                 </div>
                             </div>
                         </Card.ImgOverlay>
