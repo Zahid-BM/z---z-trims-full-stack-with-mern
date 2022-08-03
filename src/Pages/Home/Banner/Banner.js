@@ -39,7 +39,7 @@ const Banner = () => {
                                         <Modal.Header className='bg-warning' closeButton>
                                             <Modal.Title>Buyer's Nominations</Modal.Title>
                                         </Modal.Header>
-                                        <Modal.Body >
+                                        <Modal.Body className='bg-secondary'>
                                             <ListGroup>
                                                 <ListGroup.Item className='base-bg text-white text-center'>H&M</ListGroup.Item>
                                                 <ListGroup.Item className='base-bg text-white text-center'>GAP</ListGroup.Item>
@@ -50,7 +50,7 @@ const Banner = () => {
                                                 <ListGroup.Item className='base-bg text-white text-center'>NIKE</ListGroup.Item>
                                             </ListGroup>
                                         </Modal.Body>
-                                        <Modal.Footer>
+                                        <Modal.Footer className='bg-secondary'>
                                             <Button variant="danger" onClick={handleClose}>
                                                 Close
                                             </Button>
@@ -61,25 +61,17 @@ const Banner = () => {
                                     <Button onClick={handleShow} className='rounded-pill px-5 py-2 opacity-75 m-3' variant='warning'>Our Top Buyers</Button>
 
 
-                                    <Button onClick={handleShow1} className='rounded-pill px-4 py-2 opacity-75 m-3' variant='success'>Production Capacity</Button>
+                                    <Button onClick={handleShow1} className='rounded-pill px-5 py-2 opacity-75 m-3' variant='success'>Our Monthly Sell</Button>
 
                                     {/* modal declaration starts */}
                                     <Modal show={show1} onHide={handleClose1}>
-                                        <Modal.Header className='bg-warning' closeButton>
-                                            <Modal.Title>Test</Modal.Title>
+                                        <Modal.Header className='bg-success text-white' closeButton>
+                                            <Modal.Title>Average Monthly Sell</Modal.Title>
                                         </Modal.Header>
-                                        <Modal.Body >
-                                            <ListGroup>
-                                                <ListGroup.Item className='base-bg text-white text-center'>H&M</ListGroup.Item>
-                                                <ListGroup.Item className='base-bg text-white text-center'>GAP</ListGroup.Item>
-                                                <ListGroup.Item className='base-bg text-white text-center'>Levi's</ListGroup.Item>
-                                                <ListGroup.Item className='base-bg text-white text-center'>M&S</ListGroup.Item>
-                                                <ListGroup.Item className='base-bg text-white text-center'>Puma</ListGroup.Item>
-                                                <ListGroup.Item className='base-bg text-white text-center'>Adidas</ListGroup.Item>
-                                                <ListGroup.Item className='base-bg text-white text-center'>NIKE</ListGroup.Item>
-                                            </ListGroup>
+                                        <Modal.Body className='bg-secondary'>
+                                            <p className='base-bg p-4 text-white fs-5'>Our average monthly sell of this item is over <b> 5 Million units</b> internationally and day by day is increasing.</p>
                                         </Modal.Body>
-                                        <Modal.Footer>
+                                        <Modal.Footer className='bg-secondary'>
                                             <Button variant="danger" onClick={handleClose1}>
                                                 Close
                                             </Button>
@@ -103,7 +95,7 @@ const Banner = () => {
                                 </Card.Text>
                                 <div className='d-none d-sm-block'>
                                     <Button onClick={handleShow} className='rounded-pill px-5 py-2 opacity-75 m-3' variant='warning'>Our Top Buyers</Button>
-                                    <Button className='rounded-pill px-4 py-2 opacity-75 m-3' variant='success'>Production Capacity</Button>
+                                    <Button onClick={handleShow1} className='rounded-pill px-5 py-2 opacity-75 m-3' variant='success'>Our Monthly Sell</Button>
                                 </div>
                             </div>
                         </Card.ImgOverlay>
@@ -120,7 +112,7 @@ const Banner = () => {
                                 </Card.Text>
                                 <div className='d-none d-sm-block'>
                                     <Button onClick={handleShow} className='rounded-pill px-5 py-2 opacity-75 m-3' variant='warning'>Our Top Buyers</Button>
-                                    <Button className='rounded-pill px-4 py-2 opacity-75 m-3' variant='success'>Production Capacity</Button>
+                                    <Button onClick={handleShow1} className='rounded-pill px-5 py-2 opacity-75 m-3' variant='success'>Our Monthly Sell</Button>
                                 </div>
                             </div>
                         </Card.ImgOverlay>
@@ -137,7 +129,7 @@ const Banner = () => {
                                 </Card.Text>
                                 <div className='d-none d-sm-block'>
                                     <Button onClick={handleShow} className='rounded-pill px-5 py-2 opacity-75 m-3' variant='warning'>Our Top Buyers</Button>
-                                    <Button className='rounded-pill px-4 py-2 opacity-75 m-3' variant='success'>Production Capacity</Button>
+                                    <Button onClick={handleShow1} className='rounded-pill px-5 py-2 opacity-75 m-3' variant='success'>Our Monthly Sell</Button>
                                 </div>
                             </div>
                         </Card.ImgOverlay>
@@ -154,7 +146,7 @@ const Banner = () => {
                                 </Card.Text>
                                 <div className='d-none d-sm-block'>
                                     <Button onClick={handleShow} className='rounded-pill px-5 py-2 opacity-75 m-3' variant='warning'>Our Top Buyers</Button>
-                                    <Button className='rounded-pill px-4 py-2 opacity-75 m-3' variant='success'>Production Capacity</Button>
+                                    <Button onClick={handleShow1} className='rounded-pill px-5 py-2 opacity-75 m-3' variant='success'>Our Monthly Sell</Button>
                                 </div>
                             </div>
                         </Card.ImgOverlay>
@@ -171,7 +163,7 @@ const Banner = () => {
                                 </Card.Text>
                                 <div className='d-none d-sm-block'>
                                     <Button onClick={handleShow} className='rounded-pill px-5 py-2 opacity-75 m-3' variant='warning'>Our Top Buyers</Button>
-                                    <Button className='rounded-pill px-4 py-2 opacity-75 m-3' variant='success'>Production Capacity</Button>
+                                    <Button onClick={handleShow1} className='rounded-pill px-5 py-2 opacity-75 m-3' variant='success'>Our Monthly Sell</Button>
                                 </div>
                             </div>
                         </Card.ImgOverlay>
