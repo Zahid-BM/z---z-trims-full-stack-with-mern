@@ -85,31 +85,31 @@ const Footer = () => {
                         <Col className='my-auto' lg={3}>
                             <div className='text-center text-black py-5'>
                                 <h5 className='text-black'>Find us on</h5>
-                                <img className='m-2 hover1 cursor-selector' src={appImage3} alt="" />
-                                <img className='m-2 hover1 cursor-selector' src={appImage4} alt="" />
-                                <img className='m-2 hover1 cursor-selector' src={appImage5} alt="" />
+                                <a target="_blank" href='https://web.facebook.com/?_rdc=1&_rdr' rel="noreferrer" ><img className='m-2 hover1 cursor-selector' src={appImage3} alt="" /></a>
+                                <a target="_blank" href='https://www.linkedin.com/' rel="noreferrer" ><img className='m-2 hover1 cursor-selector' src={appImage4} alt="" /></a>
+                                <a target="_blank" href='https://twitter.com/' rel="noreferrer" ><img className='m-2 hover1 cursor-selector' src={appImage5} alt="" /></a>
 
                             </div>
                         </Col>
                         <Col className='my-auto' lg={3}>
                             <div className='text-center py-5'>
                                 <h5 className='text-black'>Global Branches</h5>
-                                <img className='m-2 hover1 cursor-selector' src={bangladesh} alt="" />
-                                <img className='m-2 hover1 cursor-selector' src={united} alt="" />
-                                <img className='m-2 hover1 cursor-selector' src={japan} alt="" />
-                            </div>
-                        </Col>
+                                <a target="_blank" href='https://en.wikipedia.org/wiki/Bangladesh' rel="noreferrer" ><img className='m-2 hover1 cursor-selector' src={bangladesh} alt="" /></a>
+                                <a target="_blank" href='https://en.wikipedia.org/wiki/United_States' rel="noreferrer" ><img className='m-2 hover1 cursor-selector' src={united} alt="" /></a>
+                                <a target="_blank" href='https://en.wikipedia.org/wiki/Japan' rel="noreferrer" > <img className='m-2 hover1 cursor-selector' src={japan} alt="" /></a>
+                            </div >
+                        </Col >
                         <Col className='my-auto' lg={3}>
                             <div className='text-center py-5'>
                                 <h5 className='text-black'>Official Partner</h5>
-                                <img className='m-2 hover1 cursor-selector' src={nike} alt="" />
-                                <img className='m-2 hover1 cursor-selector' src={levis} alt="" />
-                                <img className='m-2 hover1 cursor-selector' src={puma} alt="" />
+                                <a target="_blank" href='https://www.nike.com/' rel="noreferrer" ><img className='m-2 hover1 cursor-selector' src={nike} alt="" /></a>
+                                <a target="_blank" href='https://www.levi.com/US/en_US/' rel="noreferrer" ><img className='m-2 hover1 cursor-selector' src={levis} alt="" /></a>
+                                <a target="_blank" href='https://us.puma.com/us/en' rel="noreferrer" ><img className='m-2 hover1 cursor-selector' src={puma} alt="" /></a>
                             </div>
                         </Col>
-                    </Row>
-                </Container>
-            </footer>
+                    </Row >
+                </Container >
+            </footer >
         </>
     );
 };
