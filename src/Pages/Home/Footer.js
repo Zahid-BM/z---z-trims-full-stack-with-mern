@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import appImage1 from '../../images/Appstore.svg';
 import appImage2 from '../../images/playstore.svg';
 import appImage3 from '../../images/facebook(1).png';
@@ -11,30 +11,49 @@ import japan from '../../images/japan.png';
 import levis from '../../images/levis.png';
 import puma from '../../images/puma.png';
 import nike from '../../images/nike.png';
-import { Button, Col, Container, Row } from 'react-bootstrap';
+import { Button, Col, Container, Modal, Row } from 'react-bootstrap';
 
 
 const Footer = () => {
     const today = new Date();
     const year = today.getFullYear();
+
+    // state for footer modal
+    const [show, setShow] = useState(false);
+    // functions for footer modal
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     return (
         <>
-
-
-
             <footer className='base-bg mt-5 '>
                 <div className='d-md-flex justify-content-around'>
+
+                    {/* modal declaration starts */}
+                    <Modal show={show} onHide={handleClose}>
+                        <Modal.Header className='bg-success text-white' closeButton>
+                            <Modal.Title>Welcome to Z&Z Footer Option</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body className='bg-secondary'>
+                            <p className='bg-warning p-4 fs-5'>This option is under constructions. Very soon will be available. Thanks.</p>
+                        </Modal.Body>
+                        <Modal.Footer className='bg-secondary'>
+                            <Button variant="danger" onClick={handleClose}>
+                                Close
+                            </Button>
+                        </Modal.Footer>
+                    </Modal>
+                    {/* modal declaration ends */}
                     <div className='d-flex flex-column align-items-center my-5'>
-                        <Button className='text-decoration-none text-dark' variant="link">Site Builders</Button>
-                        <Button className='text-decoration-none text-dark' variant="link">Programmers</Button>
-                        <Button className='text-decoration-none text-dark' variant="link">Licenses</Button>
-                        <Button className='text-decoration-none text-dark' variant="link">map</Button>
+                        <Button onClick={handleShow} className='text-decoration-none text-dark' variant="link">Site Builders</Button>
+                        <Button onClick={handleShow} className='text-decoration-none text-dark' variant="link">Programmers</Button>
+                        <Button onClick={handleShow} className='text-decoration-none text-dark' variant="link">Licenses</Button>
+                        <Button onClick={handleShow} className='text-decoration-none text-dark' variant="link">map</Button>
                     </div>
                     <div className='d-flex flex-column align-items-center my-5'>
-                        <Button className='text-decoration-none text-dark' variant="link">Suppliers</Button>
-                        <Button className='text-decoration-none text-dark' variant="link">Shipping</Button>
-                        <Button className='text-decoration-none text-dark' variant="link">Delivery</Button>
-                        <Button className='text-decoration-none text-dark' variant="link">Security</Button>
+                        <Button onClick={handleShow} className='text-decoration-none text-dark' variant="link">Suppliers</Button>
+                        <Button onClick={handleShow} className='text-decoration-none text-dark' variant="link">Shipping</Button>
+                        <Button onClick={handleShow} className='text-decoration-none text-dark' variant="link">Delivery</Button>
+                        <Button onClick={handleShow} className='text-decoration-none text-dark' variant="link">Security</Button>
                     </div>
                     <div className='d-flex flex-column align-items-center my-auto'>
                         <h4><img src={appImage6} alt="" /><span style={{ fontFamily: 'Lobstar' }} className='text-warning fw-bold fst-italic fs-2'>Z&Z</span></h4>  <span className='fs-6'><span className='text-warning fw-bold'>Trims</span> <span className='text-success fw-bold'>Manufacturer</span></span> <br />
@@ -42,16 +61,16 @@ const Footer = () => {
                         All right reserved &copy;{year}
                     </div>
                     <div className='d-flex flex-column align-items-center my-5'>
-                        <Button className='text-decoration-none text-dark' variant="link">Port Facilities</Button>
-                        <Button className='text-decoration-none text-dark' variant="link">Lead time</Button>
-                        <Button className='text-decoration-none text-dark' variant="link">Delivery Policy</Button>
-                        <Button className='text-decoration-none text-dark' variant="link">Wastage Report</Button>
+                        <Button onClick={handleShow} className='text-decoration-none text-dark' variant="link">Port Facilities</Button>
+                        <Button onClick={handleShow} className='text-decoration-none text-dark' variant="link">Lead time</Button>
+                        <Button onClick={handleShow} className='text-decoration-none text-dark' variant="link">Delivery Policy</Button>
+                        <Button onClick={handleShow} className='text-decoration-none text-dark' variant="link">Wastage Report</Button>
                     </div>
                     <div className='d-flex flex-column align-items-center my-5'>
-                        <Button className='text-decoration-none text-dark' variant="link">Career</Button>
-                        <Button className='text-decoration-none text-dark' variant="link">Newsletter</Button>
-                        <Button className='text-decoration-none text-dark' variant="link">Employees</Button>
-                        <Button className='text-decoration-none text-dark' variant="link">Social Contribution</Button>
+                        <Button onClick={handleShow} className='text-decoration-none text-dark' variant="link">Career</Button>
+                        <Button onClick={handleShow} className='text-decoration-none text-dark' variant="link">Newsletter</Button>
+                        <Button onClick={handleShow} className='text-decoration-none text-dark' variant="link">Employees</Button>
+                        <Button onClick={handleShow} className='text-decoration-none text-dark' variant="link">Social Contribution</Button>
                     </div>
                 </div>
                 <Container fluid>
