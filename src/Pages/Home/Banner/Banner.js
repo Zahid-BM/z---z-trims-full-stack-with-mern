@@ -10,9 +10,17 @@ import banner6 from '../../../images/Banner/banner-6.jpg';
 
 
 const Banner = () => {
+    // state for Top buyers modal
     const [show, setShow] = useState(false);
+    // functions for Top buyers modal
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    // state for monthly sell modal
+    const [show1, setShow1] = useState(false);
+    // functions for monthly sell modal
+    const handleClose1 = () => setShow1(false);
+    const handleShow1 = () => setShow1(true);
+
     return (
         <>
             <Carousel>
@@ -53,7 +61,31 @@ const Banner = () => {
                                     <Button onClick={handleShow} className='rounded-pill px-5 py-2 opacity-75 m-3' variant='warning'>Our Top Buyers</Button>
 
 
-                                    <Button className='rounded-pill px-4 py-2 opacity-75 m-3' variant='success'>Production Capacity</Button>
+                                    <Button onClick={handleShow1} className='rounded-pill px-4 py-2 opacity-75 m-3' variant='success'>Production Capacity</Button>
+
+                                    {/* modal declaration starts */}
+                                    <Modal show={show1} onHide={handleClose1}>
+                                        <Modal.Header className='bg-warning' closeButton>
+                                            <Modal.Title>Test</Modal.Title>
+                                        </Modal.Header>
+                                        <Modal.Body >
+                                            <ListGroup>
+                                                <ListGroup.Item className='base-bg text-white text-center'>H&M</ListGroup.Item>
+                                                <ListGroup.Item className='base-bg text-white text-center'>GAP</ListGroup.Item>
+                                                <ListGroup.Item className='base-bg text-white text-center'>Levi's</ListGroup.Item>
+                                                <ListGroup.Item className='base-bg text-white text-center'>M&S</ListGroup.Item>
+                                                <ListGroup.Item className='base-bg text-white text-center'>Puma</ListGroup.Item>
+                                                <ListGroup.Item className='base-bg text-white text-center'>Adidas</ListGroup.Item>
+                                                <ListGroup.Item className='base-bg text-white text-center'>NIKE</ListGroup.Item>
+                                            </ListGroup>
+                                        </Modal.Body>
+                                        <Modal.Footer>
+                                            <Button variant="danger" onClick={handleClose1}>
+                                                Close
+                                            </Button>
+                                        </Modal.Footer>
+                                    </Modal>
+                                    {/* modal declaration ends */}
 
                                 </div>
                             </div>
