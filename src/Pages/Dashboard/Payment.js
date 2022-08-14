@@ -1,9 +1,11 @@
 import React from 'react';
+import image from '../../images/under-construction.png'
 
 const Payment = () => {
     return (
-        <div>
-            <h1 className="text-center text-success">This is Payment Dashboard Section</h1>
+        <div className='text-center'>
+            <img className='w-100' src={image} alt="" />
+
         </div>
     );
 };
