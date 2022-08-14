@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
 import { Button, Container, Table } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
@@ -10,6 +11,12 @@ import payment from '../../images/payment.png';
 import cancel from '../../images/cancel.png';
 
 const MyOrders = () => {
+    // state for modals
+    const [show, setShow] = useState(false);
+    // functions for modals
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     const [user] = useAuthState(auth);
     const [myOrders, setMyOrders] = useState([]);
     const navigate = useNavigate();
@@ -80,12 +87,34 @@ const MyOrders = () => {
                                     <td className='bg-secondary'><small>{user?.email}</small></td>
                                     <td className='bg-secondary'><small>{order?.productName}</small></td>
                                     <td className='bg-secondary'><small>{order?.orderQuantity}</small></td>
-                                    <td className='bg-secondary'><Link to='/dashboard/payment'><Button className='base-bg text-white border-0 btn-sm'>Pay <img src={payment} alt="" /></Button></Link></td>
+                                    <td className='bg-secondary'>
+                                    
+
+                                        <Button onClick={handleShow} className='base-bg text-white border-0 btn-sm'>Pay <img src={payment} alt="" /></Button>
+
+                                    </td>
                                     <td className='bg-secondary'><img className='cursor-selector' onClick={() => handleCancelBtn(order?._id)} src={cancel} alt="" /></td>
                                 </tr>)
                             }
                         </tbody>
                     </Table>
+
+                    <Modal
+                        show={show}
+                        onHide={handleClose}>
+                        <Modal.Header className='bg-warning text-white' closeButton>
+                            <Modal.Title>Payment</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body className='base-bg text-white fw-bolder'>Do you want to pay now ?</Modal.Body>
+                        <Modal.Footer className='bg-secondary'>
+                            <Link to='/dashboard/payment'><Button variant="success" onClick={handleClose}>
+                                Yes. Proceed
+                            </Button> </Link>
+                            <Button variant="danger" onClick={handleClose}>
+                                No. Not now
+                            </Button>
+                        </Modal.Footer>
+                    </Modal>
                 </div>
             </Container>
 
