@@ -29,7 +29,7 @@ const MyOrders = () => {
     useEffect(() => {
         const getMyOrders = async () => {
             const email = user?.email;
-            const url = `https://garments-accessories.herokuapp.com/orders?email=${email}`;
+            const url = `https://zandz-trims.onrender.com/orders?email=${email}`;
             try {
                 const { data } = await axios.get(url, {
                     headers: {
@@ -51,7 +51,7 @@ const MyOrders = () => {
 
     const handleCancelBtn = id => {
 
-        const url = `https://garments-accessories.herokuapp.com/orders/${id}`;
+        const url = `https://zandz-trims.onrender.com/orders/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

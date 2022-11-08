@@ -7,7 +7,7 @@ const useReviews = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
         const getReviews = async () => {
-            const { data } = await axios.get('https://garments-accessories.herokuapp.com/reviews');
+            const { data } = await axios.get('https://zandz-trims.onrender.com/reviews');
             setReviews(data);
         }
         getReviews();

@@ -9,7 +9,7 @@ const ManageProducts = () => {
     const handleDeleteBtn = id => {
         const userConfirmation = window.confirm('Once delete then it can not be retrieve. Are you sure to delete this Item ?')
         if (userConfirmation) {
-            const url = `https://garments-accessories.herokuapp.com/trims/${id}`;
+            const url = `https://zandz-trims.onrender.com/trims/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

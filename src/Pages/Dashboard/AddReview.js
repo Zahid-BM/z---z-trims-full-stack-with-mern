@@ -16,7 +16,7 @@ const AddReview = () => {
         const review = data;
         console.log(review)
 
-        const url = 'https://garments-accessories.herokuapp.com/reviews';
+        const url = 'https://zandz-trims.onrender.com/reviews';
 
         axios.post(url, review)
             .then(res => {

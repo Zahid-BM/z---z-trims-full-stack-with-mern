@@ -19,7 +19,7 @@ const Purchase = () => {
         const order = data;
         console.log(order)
 
-        const url = 'https://garments-accessories.herokuapp.com/orders';
+        const url = 'https://zandz-trims.onrender.com/orders';
 
         axios.post(url, order)
             .then(res => {

@@ -9,7 +9,7 @@ const AddAProduct = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         const inputItem = data;
-        const url = 'https://garments-accessories.herokuapp.com/trims';
+        const url = 'https://zandz-trims.onrender.com/trims';
 
         axios.post(url, inputItem)
             .then(res => {
