@@ -16,7 +16,7 @@ const MyPortFolio = () => {
                         <h1 className='fw-bolder display-3 '><span className='text-secondary'>Hello ! This is BM</span> <span className='text-warning'>Zahidul Islam</span></h1>
                         <br />
                         <h6><span className='text-warning'>Email Address</span> : bmzahidulislam@outlook.com</h6>
-                        <h6><span className='text-warning'>Profession</span> : Programmer (Course on going...)</h6>
+                        <h6><span className='text-warning'>Profession</span> : Programmer (Web Development)</h6>
                         <h6><span className='text-warning'>Job Experience</span>: H&M Merchandiser at Ananta Apparels Limited, Supply Chain Management Officer at Ananta Apparels Limited, Trainee Supply Chain Management Officer at Ananta Apparels Limited.</h6>
                         <h6><span className='text-warning'>Academic Background</span> : Bachelor and Masters in English. National University, Bangladesh.</h6>
                         <h6><span className='text-warning'>Location</span> : Dhaka, Bangladesh.</h6>
@@ -55,7 +55,7 @@ const MyPortFolio = () => {
 
                     </Col>
                     <Col lg={6}>
-                        <img className='w-100 rounded' src={image} alt="" />
+                        <img className='w-100 rounded-circle' src={image} alt="" />
                     </Col>
                 </Row>
             </Container>
