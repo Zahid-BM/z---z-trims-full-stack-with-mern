@@ -3,7 +3,7 @@
 <h3 style="color: orange">Project is still under constructions................</h3>
 
 Live website hosted in firebase [Visit Live website](https://garments-accessories.web.app/).
-Backend/server side code is hosted in Heroku [Visit](https://zandz-trims.onrender.com/).
+Backend/server side code is hosted in Render [Visit](https://zandz-trims.onrender.com/).
 Backend/server side code GitHub repo [Visit](https://github.com/Zahid-BM/z-and-z-trims-full-stack-with-mern).
 
 # About this site
